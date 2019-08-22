@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace QuanLyNhanSu
 {
-    public partial class frmMain : Form
+    public partial class DoiMatKhau : Form
     {
-        public frmMain()
+        public DoiMatKhau()
         {
             InitializeComponent();
         }
-
     }
 }
