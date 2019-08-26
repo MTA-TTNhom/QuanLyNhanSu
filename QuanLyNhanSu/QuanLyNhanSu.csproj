@@ -48,11 +48,78 @@
     <Compile Include="cboPB.cs" />
     <Compile Include="ChucVu.cs" />
     <Compile Include="ConnectDatabase.cs" />
+    <Compile Include="DangNhap.cs" />
+    <Compile Include="DoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoiMatKhau.Designer.cs">
+      <DependentUpon>DoiMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDangNhap.Designer.cs">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChucVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChucVu.Designer.cs">
+      <DependentUpon>frmChucVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCoCauPhongBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCoCauPhongBan.Designer.cs">
+      <DependentUpon>frmCoCauPhongBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDangKy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDangKy.Designer.cs">
+      <DependentUpon>frmDangKy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDangNhap.Designer.cs">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHopDong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHopDong.Designer.cs">
+      <DependentUpon>frmHopDong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHSNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHSNV.Designer.cs">
+      <DependentUpon>frmHSNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLuong_CaNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLuong_CaNhan.Designer.cs">
+      <DependentUpon>frmLuong_CaNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLuong_PB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLuong_PB.Designer.cs">
+      <DependentUpon>frmLuong_PB.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmNhanViencs.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmNhanViencs.Designer.cs">
       <DependentUpon>frmNhanViencs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPhanCong_ViTri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPhanCong_ViTri.Designer.cs">
+      <DependentUpon>frmPhanCong_ViTri.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPhongBan.cs">
       <SubType>Form</SubType>
@@ -66,6 +133,36 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmThemChucVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThemChucVu.Designer.cs">
+      <DependentUpon>frmThemChucVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThemNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThemNV.Designer.cs">
+      <DependentUpon>frmThemNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThemPB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThemPB.Designer.cs">
+      <DependentUpon>frmThemPB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThemTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThemTaiKhoan.Designer.cs">
+      <DependentUpon>frmThemTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTroGiup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTroGiup.Designer.cs">
+      <DependentUpon>frmTroGiup.cs</DependentUpon>
+    </Compile>
     <Compile Include="HopDong.cs" />
     <Compile Include="Luong.cs" />
     <Compile Include="NhanVien.cs" />
@@ -74,6 +171,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViTri.cs" />
+    <EmbeddedResource Include="FormDangNhap.resx">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
