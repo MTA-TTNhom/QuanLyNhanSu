@@ -15,6 +15,19 @@ namespace QuanLyNhanSu
         private string matp;
         private string tentp;
 
+        public string Mapb
+        {
+            get
+            {
+                return mapb;
+            }
+
+            set
+            {
+                mapb = value;
+            }
+        }
+
 
 
 
