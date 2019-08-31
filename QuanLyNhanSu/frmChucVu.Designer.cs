@@ -431,6 +431,22 @@
     }
 
 
-        #endregion
-    }
+    #endregion
+    private DevComponents.DotNetBar.LabelX labelX3;
+    private System.Windows.Forms.GroupBox groupBox3;
+    private System.Windows.Forms.GroupBox groupBox2;
+    private DevComponents.DotNetBar.Controls.DataGridViewX dgvCV;
+    private System.Windows.Forms.GroupBox groupBox1;
+    private DevComponents.DotNetBar.Controls.TextBoxX txtTenCV;
+    private DevComponents.DotNetBar.Controls.TextBoxX txtMaCV;
+    private DevComponents.DotNetBar.LabelX labelX2;
+    private DevComponents.DotNetBar.LabelX labelX1;
+    private DevComponents.DotNetBar.ButtonX btnXoaCV;
+    private DevComponents.DotNetBar.ButtonX btnHienThi;
+    private DevComponents.DotNetBar.ButtonX btnSuaCV;
+    private DevComponents.DotNetBar.ButtonX btnThemCV;
+    private DevComponents.DotNetBar.ButtonX btnTrolai;
+    private DevComponents.DotNetBar.Controls.TextBoxX txtTimKiem;
+    private DevComponents.DotNetBar.LabelX labTimKiem;
+}
 }
