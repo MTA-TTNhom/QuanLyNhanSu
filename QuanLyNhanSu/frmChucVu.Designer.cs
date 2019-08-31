@@ -317,7 +317,118 @@
             this.txtTenCV.TabIndex = 32;
             this.txtTenCV.TextChanged += new System.EventHandler(this.txtTenCV_TextChanged);
 
+            // 
+            // txtMaCV
+            // 
+            // 
+            // 
+            // 
+            this.txtMaCV.Border.Class = "TextBoxBorder";
+            this.txtMaCV.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtMaCV.Location = new System.Drawing.Point(16, 122);
+            this.txtMaCV.Name = "txtMaCV";
+            this.txtMaCV.Size = new System.Drawing.Size(243, 20);
+            this.txtMaCV.TabIndex = 31;
+            this.txtMaCV.TextChanged += new System.EventHandler(this.txtMaCV_TextChanged);
+            // 
+            // labelX2
+            // 
+            // 
+            // 
+            // 
+            this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX2.Location = new System.Drawing.Point(16, 148);
+            this.labelX2.Name = "labelX2";
+            this.labelX2.Size = new System.Drawing.Size(75, 23);
+            this.labelX2.TabIndex = 30;
+            this.labelX2.Text = "Tên chức vụ";
+            this.labelX2.Click += new System.EventHandler(this.labelX2_Click);
+            // 
+            // labelX1
+            // 
+            // 
+            // 
+            // 
+            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX1.Location = new System.Drawing.Point(16, 94);
+            this.labelX1.Name = "labelX1";
+            this.labelX1.Size = new System.Drawing.Size(75, 23);
+            this.labelX1.TabIndex = 29;
+            this.labelX1.Text = "Mã chức vụ";
+            this.labelX1.Click += new System.EventHandler(this.labelX1_Click);
+            // 
+            // btnXoaCV
+            // 
+            this.btnXoaCV.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnXoaCV.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnXoaCV.Image = global::QuanLiNhanSu.Properties.Resources.deletered;
+            this.btnXoaCV.Location = new System.Drawing.Point(199, 287);
+            this.btnXoaCV.Name = "btnXoaCV";
+            this.btnXoaCV.Size = new System.Drawing.Size(77, 28);
+            this.btnXoaCV.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnXoaCV.TabIndex = 26;
+            this.btnXoaCV.Text = "Xóa";
+            this.btnXoaCV.Click += new System.EventHandler(this.btnXoaCV_Click);
+            // 
+            // btnHienThi
+            // 
+            this.btnHienThi.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnHienThi.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnHienThi.Image = global::QuanLiNhanSu.Properties.Resources.show_property;
+            this.btnHienThi.Location = new System.Drawing.Point(740, 26);
+            this.btnHienThi.Name = "btnHienThi";
+            this.btnHienThi.Size = new System.Drawing.Size(84, 30);
+            this.btnHienThi.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnHienThi.TabIndex = 25;
+            this.btnHienThi.Text = "Hiển thị";
+            this.btnHienThi.Click += new System.EventHandler(this.btnHienThi_Click_1);
+            // 
+            // btnSuaCV
+            // 
+            this.btnSuaCV.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnSuaCV.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnSuaCV.Image = global::QuanLiNhanSu.Properties.Resources.settings2;
+            this.btnSuaCV.Location = new System.Drawing.Point(105, 287);
+            this.btnSuaCV.Name = "btnSuaCV";
+            this.btnSuaCV.Size = new System.Drawing.Size(71, 29);
+            this.btnSuaCV.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnSuaCV.TabIndex = 24;
+            this.btnSuaCV.Text = "Sửa";
+            this.btnSuaCV.Click += new System.EventHandler(this.btnSuaCV_Click);
+            // 
+            // btnThemCV
+            // 
+            this.btnThemCV.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnThemCV.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnThemCV.Image = global::QuanLiNhanSu.Properties.Resources.user_male_add23;
+            this.btnThemCV.Location = new System.Drawing.Point(16, 286);
+            this.btnThemCV.Name = "btnThemCV";
+            this.btnThemCV.Size = new System.Drawing.Size(75, 29);
+            this.btnThemCV.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnThemCV.TabIndex = 23;
+            this.btnThemCV.Text = "Thêm";
+            this.btnThemCV.Click += new System.EventHandler(this.btnThemCV_Click_1);
+            // 
+            // frmChucVu
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ClientSize = new System.Drawing.Size(877, 518);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.labelX3);
+            this.Controls.Add(this.btnHienThi);
+            this.Name = "frmChucVu";
+            this.Text = " chức vụ";
+            this.Load += new System.EventHandler(this.frmChucVu_Load);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCV)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.ResumeLayout(false);
+
         }
+    }
 
 
         #endregion
