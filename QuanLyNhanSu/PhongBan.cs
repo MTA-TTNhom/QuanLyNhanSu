@@ -28,7 +28,18 @@ namespace QuanLyNhanSu
             }
         }
 
+        public string Tenpb
+        {
+            get
+            {
+                return tenpb;
+            }
 
+            set
+            {
+                tenpb = value;
+            }
+        }
 
 
 
