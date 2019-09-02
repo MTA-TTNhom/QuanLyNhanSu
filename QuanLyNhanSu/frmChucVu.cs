@@ -88,5 +88,107 @@ namespace QuanLyNhanSu
             frmMain frm = new frmMain();
             frm.Show();
         }
+
+        private void btnSuaCV_Click(object sender, EventArgs e)
+        {
+            ChucVu temp = new ChucVu(txtTenCV.Text, txtMaCV.Text);
+            ConnectDatabase.SuaChucVu(temp);
+            dgvCV.DataSource = ConnectDatabase.getAllChucVu();
+            MessageBox.Show("Sửa chức vụ thành công!!");
+        }
+
+        private void btnXoaCV_Click(object sender, EventArgs e)
+        {
+            ChucVu temp = new ChucVu(txtMaCV.Text, txtTenCV.Text);
+            ConnectDatabase.XoaChucVu(temp);
+            dgvCV.DataSource = ConnectDatabase.getAllChucVu();
+            MessageBox.Show("Xóa Thành Công Chức Vụ!!!");
+        }
+
+        private void btnTrolai_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Program.frMain_main.Show();
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+
+            dgvCV.DataSource = ConnectDatabase.TimKiemChucVu(txtTimKiem.Text);
+        }
+
+
+
+
+        private void btnHienThi_Click_1(object sender, EventArgs e)
+        {
+            dgvCV.DataSource = ConnectDatabase.getAllChucVu();
+        }
+
+        private void cboThongKe_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            //ComboBox temp = sender as ComboBox;
+            //string tencv = ((temp.SelectedValue) as DataRowView).Row[0].ToString();
+
+            //string sql = "select TenCV,count(MaNV) as N'Số lượng nhân viên' from NHANVIEN_CHUCVU n, CHUCVU c where TenCV=@tencv and n.MaCV=c.MaCV group by TenCV";
+
+            //DataTable dt = new DataTable();
+            //using (SqlCommand command = new SqlCommand(sql, conn))
+            //{
+            //    command.Parameters.Add(new SqlParameter("@tencv", tencv));
+
+            //    SqlDataAdapter da = new SqlDataAdapter(command);
+            //    da.Fill(dt);
+
+
+            //}
+            //dgvCV.DataSource = dt;
+        }
+
+        private void labelX3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvCV_SelectionChanged(object sender, EventArgs e)
+        {
+            DataGridView table = sender as DataGridView;
+            foreach (DataGridViewRow row in table.SelectedRows)
+            {
+                txtMaCV.Text = row.Cells[0].Value.ToString();
+                txtTenCV.Text = row.Cells[1].Value.ToString();
+
+            }
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvCV_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void labTimKiem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelX2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelX1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
