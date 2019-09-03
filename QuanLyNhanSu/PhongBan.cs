@@ -42,7 +42,44 @@ namespace QuanLyNhanSu
         }
 
 
+        public string Diachi
+        {
+            get
+            {
+                return diachi;
+            }
 
+            set
+            {
+                diachi = value;
+            }
+        }
+
+        public string Matp
+        {
+            get
+            {
+                return matp;
+            }
+
+            set
+            {
+                matp = value;
+            }
+        }
+
+        public string Tentp
+        {
+            get
+            {
+                return tentp;
+            }
+
+            set
+            {
+                tentp = value;
+            }
+        }
 
 
 
