@@ -297,5 +297,24 @@
         }
 
         #endregion
+        private DevComponents.DotNetBar.Controls.ReflectionImage reflectionImage2;
+        private DevComponents.DotNetBar.LabelX labelX1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtMaNVNV_HSNV;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtDC_HSNV;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtNS_HSNV;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtMaNV_HSNV;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtBC_HSNV;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtGT_HSNV;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtPB_HSNV;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private DevComponents.DotNetBar.Controls.ReflectionImage reflectionImage1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
     }
 }
