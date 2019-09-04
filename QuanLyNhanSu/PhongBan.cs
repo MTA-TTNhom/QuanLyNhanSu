@@ -81,7 +81,18 @@ namespace QuanLyNhanSu
             }
         }
 
+        public PhongBan()
+        {
 
+        }
+        public PhongBan(string mapb, string tenpb, string diachi, string matp, string tentp)
+        {
+            this.Mapb = mapb;
+            this.Tenpb = tenpb;
+            this.Diachi = diachi;
+            this.Matp = matp;
+            this.Tentp = tentp;
+        }
 
 
 
