@@ -123,5 +123,11 @@
         }
 
         #endregion
+
+        private DevComponents.DotNetBar.Controls.ComboBoxEx cboPB;
+        private System.Windows.Forms.DataGridView dgvCCPB;
+        private DevComponents.DotNetBar.LabelX labelX1;
+        private DevComponents.DotNetBar.ButtonX btnHienThi;
+        private DevComponents.DotNetBar.ButtonX buttonX1;
     }
 }
