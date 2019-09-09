@@ -57,7 +57,10 @@ namespace QuanLyNhanSu
 
         private void frmCoCauPhongBan_Load(object sender, EventArgs e)
         {
-
+            frmChucVu f = new frmChucVu();
+            f.Hide();
+            f.Visible = false;
+            f.Enabled = false;
         }
 
         private void buttonX1_Click(object sender, EventArgs e)
