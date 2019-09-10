@@ -8,7 +8,8 @@ namespace QuanLyNhanSu
 {
     class PhanCong_ViTri
     {
-
+        private string MaVT;
+        private string MaNV;
 
 
 
