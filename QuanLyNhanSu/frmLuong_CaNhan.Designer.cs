@@ -269,9 +269,116 @@
             this.labelX9.Size = new System.Drawing.Size(87, 27);
             this.labelX9.TabIndex = 29;
             this.labelX9.Text = "Tổng Lương";
-
+            // 
+            // btnTongLuong
+            // 
+            this.btnTongLuong.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnTongLuong.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnTongLuong.Image = global::QuanLiNhanSu.Properties.Resources.printer_2;
+            this.btnTongLuong.Location = new System.Drawing.Point(975, 426);
+            this.btnTongLuong.Name = "btnTongLuong";
+            this.btnTongLuong.Size = new System.Drawing.Size(115, 45);
+            this.btnTongLuong.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnTongLuong.TabIndex = 31;
+            this.btnTongLuong.Text = "Tổng Lương";
+            this.btnTongLuong.Click += new System.EventHandler(this.btnTongLuong_Click);
+            // 
+            // btnThuong
+            // 
+            this.btnThuong.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnThuong.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnThuong.Image = global::QuanLiNhanSu.Properties.Resources.money;
+            this.btnThuong.Location = new System.Drawing.Point(1096, 426);
+            this.btnThuong.Name = "btnThuong";
+            this.btnThuong.Size = new System.Drawing.Size(108, 45);
+            this.btnThuong.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnThuong.TabIndex = 26;
+            this.btnThuong.Text = "Thưởng";
+            this.btnThuong.Click += new System.EventHandler(this.btnThuong_Click);
+            // 
+            // labelX2
+            // 
+            // 
+            // 
+            // 
+            this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX2.Image = global::QuanLiNhanSu.Properties.Resources.kappfinder3;
+            this.labelX2.Location = new System.Drawing.Point(122, 91);
+            this.labelX2.Name = "labelX2";
+            this.labelX2.Size = new System.Drawing.Size(114, 27);
+            this.labelX2.TabIndex = 3;
+            this.labelX2.Text = "Tìm Kiếm";
+            // 
+            // buttonX1
+            // 
+            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonX1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonX1.Image = global::QuanLiNhanSu.Properties.Resources.cancel1;
+            this.buttonX1.Location = new System.Drawing.Point(2, 3);
+            this.buttonX1.Name = "buttonX1";
+            this.buttonX1.Size = new System.Drawing.Size(80, 36);
+            this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.buttonX1.TabIndex = 46;
+            this.buttonX1.Text = "Thoát";
+            this.buttonX1.Click += new System.EventHandler(this.buttonX1_Click);
+            // 
+            // frmLuong_CaNhan
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1216, 497);
+            this.Controls.Add(this.buttonX1);
+            this.Controls.Add(this.btnTongLuong);
+            this.Controls.Add(this.txtTongLuong);
+            this.Controls.Add(this.labelX9);
+            this.Controls.Add(this.txtSNTC);
+            this.Controls.Add(this.labelX8);
+            this.Controls.Add(this.btnThuong);
+            this.Controls.Add(this.txtTenNV);
+            this.Controls.Add(this.txtLuong);
+            this.Controls.Add(this.txtLuongThuong);
+            this.Controls.Add(this.txtGhichu);
+            this.Controls.Add(this.txtMaNV);
+            this.Controls.Add(this.labelX6);
+            this.Controls.Add(this.labelX5);
+            this.Controls.Add(this.labelX4);
+            this.Controls.Add(this.labelX3);
+            this.Controls.Add(this.labelX7);
+            this.Controls.Add(this.labelX2);
+            this.Controls.Add(this.txtTimKiem);
+            this.Controls.Add(this.dgvLuong_CaNhan);
+            this.Controls.Add(this.labelX1);
+            this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Name = "frmLuong_CaNhan";
+            this.Text = "Lương nhân viên";
+            this.Load += new System.EventHandler(this.frmLuong_CaNhan_Load_2);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLuong_CaNhan)).EndInit();
+            this.ResumeLayout(false);
         }
 
         #endregion
+        private DevComponents.DotNetBar.LabelX labelX1;
+        private DevComponents.DotNetBar.Controls.DataGridViewX dgvLuong_CaNhan;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtTimKiem;
+        private DevComponents.DotNetBar.LabelX labelX2;
+        private DevComponents.DotNetBar.ButtonX btnThuong;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtTenNV;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtLuong;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtLuongThuong;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtGhichu;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtMaNV;
+        private DevComponents.DotNetBar.LabelX labelX6;
+        private DevComponents.DotNetBar.LabelX labelX5;
+        private DevComponents.DotNetBar.LabelX labelX4;
+        private DevComponents.DotNetBar.LabelX labelX3;
+        private DevComponents.DotNetBar.LabelX labelX7;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtSNTC;
+        private DevComponents.DotNetBar.LabelX labelX8;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtTongLuong;
+        private DevComponents.DotNetBar.LabelX labelX9;
+        private DevComponents.DotNetBar.ButtonX btnTongLuong;
+        private DevComponents.DotNetBar.ButtonX buttonX1;
     }
 }
