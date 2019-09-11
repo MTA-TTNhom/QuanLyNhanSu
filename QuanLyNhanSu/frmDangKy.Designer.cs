@@ -125,6 +125,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Chartreuse;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(300, 458);
             this.button1.Name = "button1";
