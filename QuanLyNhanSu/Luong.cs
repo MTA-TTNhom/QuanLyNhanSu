@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QuanLyNhanSu
+namespace QuanLiNhanSu
 {
     class Luong
     {
@@ -92,35 +92,7 @@ namespace QuanLyNhanSu
                 TongLuong = value;
             }
         }
-        
-        public Sua_Luong(NhanVien a,string manv, string luong, string luongthuong, string ghichu, string songaytangca, string tongluong)
-        {
-            
-            this.a.MaNV = manv;
-            this.a.LuongNV = luong;
-            this.a.LuongThuong = luongthuong;
-            this.a.Chichu = ghichu;
-            this.a.SoNgayTangCa = songaytangca;
-            this.a.TongLuong = tongluong;
-        }
-        public Them_Luong(string manv, string luong, string luongthuong, string ghichu, string songaytangca, string tongluong)
-        {
-            this.a.MaNV = manv;
-            this.a.LuongNV = luong;
-            this.a.LuongThuong = luongthuong;
-            this.a.Chichu = ghichu;
-            this.a.SoNgayTangCa = songaytangca;
-            this.a.TongLuong = tongluong;
-        }
-        public Xoa_Luong(string manv, string luong, string luongthuong, string ghichu, string songaytangca, string tongluong)
-        {
-            this.a.MaNV = manv;
-            this.a.LuongNV = 0;
-            this.a.LuongThuong = 0;
-            this.a.Chichu = '';
-            this.a.SoNgayTangCa = 0;
-            this.a.TongLuong = 0;
-        }
+
         public Luong(string manv, string luong, string luongthuong, string ghichu, string songaytangca, string tongluong)
         {
             this.MaNV = manv;

@@ -244,9 +244,9 @@ namespace QuanLyNhanSu
             this.a.Diachi = '';
             this.a.Mapb = '';
             this.a.Tongiao = '';
-            this.a.Dantoc = '';
-            this.a.Sdt = '';
-            this.a.Cmt = '';
+            this.a.Dantoc = dantoc1;
+            this.a.Sdt = sdt1;
+            this.a.Cmt = cmt1;
 
         }
         public NhanVien(string manv, string tennv, string bangcap, string gt, DateTime ngaysinh, string diachi, string mapb, string sdt, string cmt, string dantoc, string tongiao)
