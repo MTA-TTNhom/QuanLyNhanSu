@@ -86,6 +86,189 @@
             this.dgvLuong_CaNhan.TabIndex = 1;
             this.dgvLuong_CaNhan.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLuong_CaNhan_CellContentClick_1);
             this.dgvLuong_CaNhan.SelectionChanged += new System.EventHandler(this.dgvLuong_CaNhan_SelectionChanged);
+            // 
+            // txtTimKiem
+            // 
+            // 
+            // 
+            // 
+            this.txtTimKiem.Border.Class = "TextBoxBorder";
+            this.txtTimKiem.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtTimKiem.Location = new System.Drawing.Point(258, 91);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(390, 22);
+            this.txtTimKiem.TabIndex = 2;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
+            // 
+            // txtTenNV
+            // 
+            // 
+            // 
+            // 
+            this.txtTenNV.Border.Class = "TextBoxBorder";
+            this.txtTenNV.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtTenNV.Location = new System.Drawing.Point(1005, 183);
+            this.txtTenNV.Name = "txtTenNV";
+            this.txtTenNV.Size = new System.Drawing.Size(177, 22);
+            this.txtTenNV.TabIndex = 25;
+            this.txtTenNV.TextChanged += new System.EventHandler(this.txtTenNV_TextChanged);
+            // 
+            // txtLuong
+            // 
+            // 
+            // 
+            // 
+            this.txtLuong.Border.Class = "TextBoxBorder";
+            this.txtLuong.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtLuong.Location = new System.Drawing.Point(1005, 219);
+            this.txtLuong.Name = "txtLuong";
+            this.txtLuong.Size = new System.Drawing.Size(177, 22);
+            this.txtLuong.TabIndex = 24;
+            // 
+            // txtLuongThuong
+            // 
+            // 
+            // 
+            // 
+            this.txtLuongThuong.Border.Class = "TextBoxBorder";
+            this.txtLuongThuong.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtLuongThuong.Location = new System.Drawing.Point(1005, 252);
+            this.txtLuongThuong.Name = "txtLuongThuong";
+            this.txtLuongThuong.Size = new System.Drawing.Size(177, 22);
+            this.txtLuongThuong.TabIndex = 23;
+            // 
+            // txtGhichu
+            // 
+            // 
+            // 
+            // 
+            this.txtGhichu.Border.Class = "TextBoxBorder";
+            this.txtGhichu.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtGhichu.Location = new System.Drawing.Point(1005, 292);
+            this.txtGhichu.Name = "txtGhichu";
+            this.txtGhichu.Size = new System.Drawing.Size(177, 22);
+            this.txtGhichu.TabIndex = 22;
+            // 
+            // txtMaNV
+            // 
+            // 
+            // 
+            // 
+            this.txtMaNV.Border.Class = "TextBoxBorder";
+            this.txtMaNV.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtMaNV.Location = new System.Drawing.Point(1005, 139);
+            this.txtMaNV.Name = "txtMaNV";
+            this.txtMaNV.Size = new System.Drawing.Size(177, 22);
+            this.txtMaNV.TabIndex = 21;
+            this.txtMaNV.TextChanged += new System.EventHandler(this.txtMaNV_TextChanged);
+            // 
+            // labelX6
+            // 
+            // 
+            // 
+            // 
+            this.labelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX6.Location = new System.Drawing.Point(898, 183);
+            this.labelX6.Name = "labelX6";
+            this.labelX6.Size = new System.Drawing.Size(87, 27);
+            this.labelX6.TabIndex = 20;
+            this.labelX6.Text = "Tên nhân viên";
+            // 
+            // labelX5
+            // 
+            // 
+            // 
+            // 
+            this.labelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX5.Location = new System.Drawing.Point(898, 216);
+            this.labelX5.Name = "labelX5";
+            this.labelX5.Size = new System.Drawing.Size(87, 27);
+            this.labelX5.TabIndex = 19;
+            this.labelX5.Text = "Lương ";
+            // 
+            // labelX4
+            // 
+            // 
+            // 
+            // 
+            this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX4.Location = new System.Drawing.Point(898, 249);
+            this.labelX4.Name = "labelX4";
+            this.labelX4.Size = new System.Drawing.Size(87, 27);
+            this.labelX4.TabIndex = 18;
+            this.labelX4.Text = "Lương thưởng";
+            // 
+            // labelX3
+            // 
+            // 
+            // 
+            // 
+            this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX3.Location = new System.Drawing.Point(898, 292);
+            this.labelX3.Name = "labelX3";
+            this.labelX3.Size = new System.Drawing.Size(87, 27);
+            this.labelX3.TabIndex = 17;
+            this.labelX3.Text = "Ghi chú";
+            // 
+            // labelX7
+            // 
+            // 
+            // 
+            // 
+            this.labelX7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX7.Location = new System.Drawing.Point(898, 139);
+            this.labelX7.Name = "labelX7";
+            this.labelX7.Size = new System.Drawing.Size(87, 27);
+            this.labelX7.TabIndex = 16;
+            this.labelX7.Text = "Mã nhân viên";
+            // 
+            // txtSNTC
+            // 
+            // 
+            // 
+            // 
+            this.txtSNTC.Border.Class = "TextBoxBorder";
+            this.txtSNTC.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtSNTC.Location = new System.Drawing.Point(1005, 329);
+            this.txtSNTC.Name = "txtSNTC";
+            this.txtSNTC.Size = new System.Drawing.Size(177, 22);
+            this.txtSNTC.TabIndex = 28;
+            // 
+            // labelX8
+            // 
+            // 
+            // 
+            // 
+            this.labelX8.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX8.Location = new System.Drawing.Point(898, 325);
+            this.labelX8.Name = "labelX8";
+            this.labelX8.Size = new System.Drawing.Size(87, 27);
+            this.labelX8.TabIndex = 27;
+            this.labelX8.Text = "Số ngày tăng ca";
+            // 
+            // txtTongLuong
+            // 
+            // 
+            // 
+            // 
+            this.txtTongLuong.Border.Class = "TextBoxBorder";
+            this.txtTongLuong.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtTongLuong.Location = new System.Drawing.Point(1005, 369);
+            this.txtTongLuong.Name = "txtTongLuong";
+            this.txtTongLuong.Size = new System.Drawing.Size(177, 22);
+            this.txtTongLuong.TabIndex = 30;
+            // 
+            // labelX9
+            // 
+            // 
+            // 
+            // 
+            this.labelX9.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX9.Location = new System.Drawing.Point(898, 365);
+            this.labelX9.Name = "labelX9";
+            this.labelX9.Size = new System.Drawing.Size(87, 27);
+            this.labelX9.TabIndex = 29;
+            this.labelX9.Text = "Tổng Lương";
 
         }
 
