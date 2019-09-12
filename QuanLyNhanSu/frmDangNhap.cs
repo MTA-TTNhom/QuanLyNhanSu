@@ -19,6 +19,11 @@ namespace QuanLyNhanSu
 
         private void button1_Click(object sender, EventArgs e)
         {
+            frmDangNhap close = new frmDangNhap();
+            frmDangKy open = new frmDangKy();
+            open.Show();
+            close.Hide();
+            close.Visible = false;
 
         }
 
