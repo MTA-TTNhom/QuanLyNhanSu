@@ -149,7 +149,35 @@ namespace QuanLyNhanSu
             form.Show();
 
         }
+   public void HienThiDataGridViewComboBoxColumn(DataGridViewComboBoxColumn cmbColumn)
 
+        {
+            cmbColumn.DataSource = m_MonHocData.LayDsMonHoc();
+
+            cmbColumn.DisplayMember = "TenMonHoc";
+
+
+            cmbColumn.ValueMember = "MaMonHoc";
+
+            cmbColumn.DataPropertyName = "MaMonHoc";
+
+            cmbColumn.HeaderText = "Môn học";
+        }
+
+        public void HienThiDataGridViewComboBoxColumnGiaoVien(DataGridViewComboBoxColumn cmbColumn)
+        {
+
+            cmbColumn.DataSource = m_MonHocData.LayDsMonHoc();
+            cmbColumn.DisplayMember = "TenMonHoc";
+
+            cmbColumn.ValueMember = "MaMonHoc";
+
+            cmbColumn.DataPropertyName = "MaMonHoc";
+
+            cmbColumn.HeaderText = "Chuyên môn";
+
+
+        }
         private void txtMaCV_TextChanged_1(object sender, EventArgs e)
         {
 
