@@ -114,20 +114,7 @@ namespace QuanLyNhanSu
             cmbColumn.HeaderText = "Môn học";
         }
 
-        public void HienThiDataGridViewComboBoxColumnGiaoVien(DataGridViewComboBoxColumn cmbColumn)
-        {
-
-            cmbColumn.DataSource = m_MonHocData.LayDsMonHoc();
-            cmbColumn.DisplayMember = "TenMonHoc";
-
-            cmbColumn.ValueMember = "MaMonHoc";
-
-            cmbColumn.DataPropertyName = "MaMonHoc";
-
-            cmbColumn.HeaderText = "Chuyên môn";
-
-
-        }
+      
         public void load()
         {
             string sql = "select *from CHUCVU";
