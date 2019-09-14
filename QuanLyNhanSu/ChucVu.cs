@@ -4,153 +4,43 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QuanLyNhanSu
+namespace QuanLiNhanSu
 {
     class ChucVu
     {
-        
-            public DataTable hienthinhanvien()
-            {
-                SqlConnection cnn = ketnoi.Get();
-                // Khai báo và khởi tạo đối tượng Command, truyền vào tên thủ tục tương ứng
-                SqlCommand cmd = new SqlCommand("hienthitatcanhanvien", cnn);
-                // Khai báo kiểu thực thi là Thực thi thủ tục
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Connection = cnn;
-                cmd.ExecuteNonQuery();
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                cnn.Close();
-                return dt;
-            }
-            public bool them_nhanvien(string hoTen, string chucvu, bool gioiTinh, DateTime ngaySinh, string soChungMinh, string diaChi, string soDienThoai, DateTime ngayVaoLam)
-            {
-                SqlConnection cnn = ketnoi.Get();
-                SqlCommand cmd = new SqlCommand("them_nhanvien", cnn);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("hoTen", hoTen);
-                cmd.Parameters.AddWithValue("gioiTinh", gioiTinh);
-                cmd.Parameters.AddWithValue("ngaySinh", ngaySinh);
-                cmd.Parameters.AddWithValue("soChungMinh", soChungMinh);
-                cmd.Parameters.AddWithValue("diaChi", diaChi);
-                cmd.Parameters.AddWithValue("soDienThoai", soDienThoai);
-                cmd.Parameters.AddWithValue("ngayVaoLam", ngayVaoLam);
-            cmd.Parameters.AddWithValue("chucvu", chucvu);
-            int i = cmd.ExecuteNonQuery();
-                cnn.Close();
-                if (i != 0)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
-        public bool sua_nhanvien(string hoTen, string chucvu, bool gioiTinh, DateTime ngaySinh, string soChungMinh, string diaChi, string soDienThoai, DateTime ngayVaoLam)
+        private string tencv;
+        private string macv;
+
+
+        public string Tencv
         {
-            SqlConnection cnn = ketnoi.Get();
-            SqlCommand cmd = new SqlCommand("sua_nhanvien", cnn);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.ClearWithValue("hoTen", hoTen);
-            cmd.Parameters.ClearWithValue("gioiTinh", gioiTinh); 
-            cmd.Parameters.ClearWithValue("ngaySinh", ngaySinh);
-            cmd.Parameters.ClearWithValue("soChungMinh", soChungMinh);
-            cmd.Parameters.ClearWithValue("diaChi", diaChi);
-            cmd.Parameters.ClearWithValue("soDienThoai", soDienThoai);
-            cmd.Parameters.ClearWithValue("ngayVaoLam", ngayVaoLam);
-            cmd.Parameters.ClearWithValue("chucvu", chucvu);
-            int i = cmd.ExecuteNonQuery();
-            cnn.Close();
-            if (i != 0)
+            get
             {
-                return true;
+                return tencv;
             }
-            else
+
+            set
             {
-                return false;
+                tencv = value;
             }
         }
-        public bool xoa_nhanvien(string hoTen, string chucvu, bool gioiTinh, DateTime ngaySinh, string soChungMinh, string diaChi, string soDienThoai, DateTime ngayVaoLam)
+
+        public string Macv
         {
-            SqlConnection cnn = ketnoi.Get();
-            SqlCommand cmd = new SqlCommand("them_nhanvien", cnn);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("hoTen", hoTen);
-            cmd.Parameters.AddWithValue("gioiTinh", gioiTinh);
-            cmd.Parameters.AddWithValue("ngaySinh", ngaySinh);
-            cmd.Parameters.AddWithValue("soChungMinh", soChungMinh);
-            cmd.Parameters.AddWithValue("diaChi", diaChi);
-            cmd.Parameters.AddWithValue("soDienThoai", soDienThoai);
-            cmd.Parameters.AddWithValue("ngayVaoLam", ngayVaoLam);
-            cmd.Parameters.AddWithValue("chucvu", chucvu);
-            int i = cmd.ExecuteNonQuery();
-            cnn.Close();
-            if (i != 0)
+            get
             {
-                return true;
+                return macv;
             }
-            else
+
+            set
             {
-                return false;
+                macv = value;
             }
         }
-        public void xoa_nhanvien(string hoTen, string chucvu, bool gioiTinh, DateTime ngaySinh, string soChungMinh, string diaChi, string soDienThoai, DateTime ngayVaoLam)
-            {
-
-            SqlConnection cnn = ketnoi.Get();
-            SqlCommand cmd = new SqlCommand("xoa_nhanvien", cnn);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("hoTen", hoTen);
-            cmd.Parameters.AddWithValue("gioiTinh", gioiTinh);
-            cmd.Parameters.AddWithValue("ngaySinh", ngaySinh);
-            cmd.Parameters.AddWithValue("soChungMinh", soChungMinh);
-            cmd.Parameters.AddWithValue("diaChi", diaChi);
-            cmd.Parameters.AddWithValue("soDienThoai", soDienThoai);
-            cmd.Parameters.AddWithValue("ngayVaoLam", ngayVaoLam);
-            cmd.Parameters.AddWithValue("maNhanVien", maNhanVien);
-            cmd.Parameters.AddWithValue("chucvu", chucvu);
-            int i = cmd.ExecuteNonQuery();
-            cnn.Close();
-
-        }
-
-            public void sua_nhanvien(string hoTen, string chucvu, bool gioiTinh, DateTime ngaySinh, string soChungMinh, string diaChi, string soDienThoai, DateTime ngayVaoLam)
-            {
-                SqlConnection cnn = ketnoi.Get();
-                SqlCommand cmd = new SqlCommand("sua_nhanvien", cnn);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("hoTen", hoTen);
-                cmd.Parameters.AddWithValue("gioiTinh", gioiTinh);
-                cmd.Parameters.AddWithValue("ngaySinh", ngaySinh);
-                cmd.Parameters.AddWithValue("soChungMinh", soChungMinh);
-                cmd.Parameters.AddWithValue("diaChi", diaChi);
-                cmd.Parameters.AddWithValue("soDienThoai", soDienThoai);
-                cmd.Parameters.AddWithValue("ngayVaoLam", ngayVaoLam);
-                cmd.Parameters.AddWithValue("maNhanVien", maNhanVien);
-            cmd.Parameters.AddWithValue("chucvu", chucvu);
-            int i = cmd.ExecuteNonQuery();
-                cnn.Close();
-            }
-        public void them_nhanvien(string hoTen,string chucvu, bool gioiTinh, DateTime ngaySinh, string soChungMinh, string diaChi, string soDienThoai, DateTime ngayVaoLam, int maNhanVien)
+        public ChucVu(string macv, string tencv)
         {
-            SqlConnection cnn = ketnoi.Get();
-            SqlCommand cmd = new SqlCommand("sua_nhanvien", cnn);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("hoTen", hoTen);
-            cmd.Parameters.AddWithValue("gioiTinh", gioiTinh);
-            cmd.Parameters.AddWithValue("ngaySinh", ngaySinh);
-            cmd.Parameters.AddWithValue("soChungMinh", soChungMinh);
-            cmd.Parameters.AddWithValue("diaChi", diaChi);
-            cmd.Parameters.AddWithValue("soDienThoai", soDienThoai);
-            cmd.Parameters.AddWithValue("ngayVaoLam", ngayVaoLam);
-            cmd.Parameters.AddWithValue("maNhanVien", maNhanVien);
-            cmd.Parameters.AddWithValue("chucvu", chucvu);
-            int i = cmd.ExecuteNonQuery();
-            cnn.Close();
+            this.Tencv = tencv;
+            this.Macv = macv;
         }
-
-
     }
 }
