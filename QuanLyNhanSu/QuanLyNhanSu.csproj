@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="cboPB.cs" />
     <Compile Include="ChucVu.cs" />
+    <Compile Include="ConnectDatabase.cs" />
     <Compile Include="frmNhanViencs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,8 +69,11 @@
     <Compile Include="HopDong.cs" />
     <Compile Include="Luong.cs" />
     <Compile Include="NhanVien.cs" />
+    <Compile Include="PhanCong_ViTri.cs" />
+    <Compile Include="PhongBan.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViTri.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

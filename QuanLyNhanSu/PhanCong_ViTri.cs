@@ -8,5 +8,16 @@ namespace QuanLyNhanSu
 {
     class PhanCong_ViTri
     {
+
+
+
+
+
+
+
+
+
+
+
     }
 }

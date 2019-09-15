@@ -8,5 +8,21 @@ namespace QuanLyNhanSu
 {
     class ViTri
     {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }
