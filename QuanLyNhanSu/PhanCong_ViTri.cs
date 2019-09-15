@@ -12,6 +12,19 @@ namespace QuanLyNhanSu
         private string MaNV;
 
 
+        public string MaVT1
+        {
+            get
+            {
+                return MaVT;
+            }
+
+            set
+            {
+                MaVT = value;
+            }
+        }
+
 
 
 
