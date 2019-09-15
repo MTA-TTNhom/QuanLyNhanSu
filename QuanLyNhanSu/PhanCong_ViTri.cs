@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QuanLyNhanSu
 {
-    class cboPB
+    class PhanCong_ViTri
     {
     }
 }
