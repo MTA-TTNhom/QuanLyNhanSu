@@ -9,7 +9,8 @@ namespace QuanLyNhanSu
     class ViTri
     {
 
-
+        private string tenvt;
+        private string mavt;
 
 
 
