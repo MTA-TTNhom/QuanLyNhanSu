@@ -353,7 +353,6 @@ namespace QuanLyNhanSu
             }
             return 0;
         }
-        
 
 
 
@@ -381,6 +380,437 @@ namespace QuanLyNhanSu
 
 
 
+
+        //----------------------------------------NHÂN VIÊN ---------------------------------------------
+
+
+
+
+
+        public static DataTable DSNV()
+
+        {
+
+
+            string sql = "select n.MaNV as N'Mã nhân viên', HoTen as N'Họ tên',GioiTinh as N'Giới tính', n.DiaChi as N'Địa chỉ', NgaySinh as N'Ngày sinh', TenCV as N'Tên chức vụ',TenVT as N'Tên vị trí' ,TenPB as N'Tên phòng ban'"
+                         + " from NHANVIEN n, PHONGBAN p, CHUCVU c, VITRICONGVIEC v, NHANVIEN_VITRI nv, NHANVIEN_CHUCVU nc "
+                         + " where nc.MaCV = c.MaCV and n.MaPB = p.MaPB and v.MaVT = nv.MaVT and n.MaNV = nv.MaNV and nc.MaNV = n.MaNV ";
+
+
+            SqlDataAdapter dap = new SqlDataAdapter(sql, conn);
+
+
+
+            DataTable dt = new DataTable();
+
+
+
+
+            dap.Fill(dt);
+
+
+            return dt;
+        }
+
+
+
+
+
+
+
+
+        public static string getTenTruongPhongTuMaTruongPhong(string matp)
+
+        {
+
+
+            if (matp == "") return "";
+
+
+            string sql = "select NHANVIEN.HoTen from NHANVIEN where NHANVIEN.MaNV = @matp";
+
+            using (SqlCommand command = new SqlCommand(sql, conn))
+            {
+
+                command.Parameters.Add(new SqlParameter("@matp", matp));
+
+                using (SqlDataReader dataReader = command.ExecuteReader())
+
+                {
+
+
+                    if (dataReader.Read() == true)
+                    {
+
+
+
+                        return dataReader[0].ToString();
+
+
+                    }
+
+                }
+
+            }
+
+
+
+
+            return "Không tồn tại";
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+        public static string getTenNhanVienTuMaNhanVien(string manv)
+        {
+
+
+            if (manv == "") return "";
+
+            string sql = "select NHANVIEN.HoTen from NHANVIEN where NHANVIEN.MaNV = @manv";
+
+            using (SqlCommand command = new SqlCommand(sql, conn))
+
+            {
+
+
+
+                command.Parameters.Add(new SqlParameter("@manv", manv));
+                using (SqlDataReader dataReader = command.ExecuteReader())
+
+                {
+
+
+                    if (dataReader.Read() == true)
+                    {
+
+
+
+
+                        return dataReader[0].ToString();
+                    }
+
+
+
+                }
+
+
+            }
+            return "Không tồn tại";
+        }
+
+
+        public static string getTenPhongBanTuMaPhongBan(string mapb)
+        {
+
+
+            if (mapb == "") return "";
+            string sql = "select TenPB from PhongBan where MaPB = @mapb";
+
+
+            using (SqlCommand command = new SqlCommand(sql, conn))
+            {
+
+                command.Parameters.Add(new SqlParameter("@mapb", mapb));
+
+
+
+                using (SqlDataReader dataReader = command.ExecuteReader())
+                {
+
+
+
+                    if (dataReader.Read() == true)
+                    {
+                        return dataReader[0].ToString();
+                    }
+
+
+
+
+                }
+
+
+
+            }
+            return "Không tồn tại";
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        public static DataTable getAllNhanVien()
+
+
+        {
+
+            string sql = "select * from NHANVIEN";
+
+
+            SqlDataAdapter dap = new SqlDataAdapter(sql, conn);
+            DataTable dt = new DataTable();
+            dap.Fill(dt);
+
+            return dt;
+
+
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+        public static DataTable TimKiemNhanVien(string nv)
+        {
+
+
+
+
+            string sql = "select * from NHANVIEN n where ((MaNV like '%' + @text + '%') or(DiaChi like '%' + @text + '%') or(HoTen like '%' + @text + '%'))";
+
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            cmd.Parameters.AddWithValue("text", nv);
+
+            cmd.ExecuteNonQuery();
+
+            cmd.CommandType = CommandType.Text;
+
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+
+            DataTable sttable = new DataTable();
+
+            adapter.Fill(sttable);
+            return sttable;
+        }
+
+
+
+
+
+
+        public static void ThemNhanVien(NhanVien nhanvien)
+        {
+
+
+            string sql = "insert into NHANVIEN(MaNV, HoTen, BangCap, GioiTinh, NgaySinh, DiaChi, MaPB, CMTND, SDT, DanToc, TonGiao) values(@manv, @tennv, @bangcap, @gioitinh, CONVERT(date, @ngaysinh, 111), @diachi, @mapb, @cmt, @sdt, @dt, @tg)";
+
+            SqlCommand cmd = new SqlCommand(sql, conn);
+
+            using (SqlCommand command = new SqlCommand(sql, conn))
+
+            {
+
+                command.Parameters.Add(new SqlParameter("@manv", nhanvien.Manv));
+
+                command.Parameters.Add(new SqlParameter("@tennv", nhanvien.Tennv));
+
+                command.Parameters.Add(new SqlParameter("@bangcap", nhanvien.Bangcap));
+
+                command.Parameters.Add(new SqlParameter("@gioitinh", nhanvien.Gt));
+
+                command.Parameters.Add(new SqlParameter("@ngaysinh", nhanvien.Ngaysinh.GetDateTimeFormats()[6]));
+
+                command.Parameters.Add(new SqlParameter("@diachi", nhanvien.Diachi));
+
+
+
+                command.Parameters.Add(new SqlParameter("@mapb", nhanvien.Mapb));
+
+
+                command.Parameters.Add(new SqlParameter("@cmt", nhanvien.Cmt));
+
+
+                command.Parameters.Add(new SqlParameter("@sdt", nhanvien.Sdt));
+
+
+                command.Parameters.Add(new SqlParameter("@dt", nhanvien.Dantoc));
+
+
+
+                command.Parameters.Add(new SqlParameter("@tg", nhanvien.Tongiao));
+
+
+
+
+                int kq = command.ExecuteNonQuery();
+
+                if (kq > 0)
+                {
+
+
+                    MessageBox.Show("Thêm nhân viên mới thành công!");
+                }
+
+
+                else MessageBox.Show("Thêm nhân viên mới thất bại!");
+
+
+
+                command.Cancel();
+
+
+            }
+        }
+
+
+
+
+
+
+
+
+
+        public static void SuaNhanVien(NhanVien nhanvien)
+        {
+
+
+
+            string sql = "UPDATE NHANVIEN set HoTen=@tennv, DiaChi=@diadiem, CMTND=@cmt, SDT=@sdt, DanToc=@dt, TonGiao=@tg, BangCap=@bangcap, MaPB=@mapb, GioiTinh=@gioitinh, NgaySinh=CONVERT(date, @ngaysinh, 111) where MaNV=@manv";
+
+
+
+
+
+
+            using (SqlCommand command = new SqlCommand(sql, conn))
+            {
+
+
+                command.Parameters.Add(new SqlParameter("@manv", nhanvien.Manv));
+
+
+                command.Parameters.Add(new SqlParameter("@tennv", nhanvien.Tennv));
+
+                command.Parameters.Add(new SqlParameter("@bangcap", nhanvien.Bangcap));
+                command.Parameters.Add(new SqlParameter("@gioitinh", nhanvien.Gt));
+                command.Parameters.Add(new SqlParameter("@ngaysinh", nhanvien.Ngaysinh.GetDateTimeFormats()[6]));
+
+                command.Parameters.Add(new SqlParameter("@diadiem", nhanvien.Diachi));
+
+                command.Parameters.Add(new SqlParameter("@mapb", nhanvien.Mapb));
+                command.Parameters.Add(new SqlParameter("@cmt", nhanvien.Cmt));
+
+                command.Parameters.Add(new SqlParameter("@sdt", nhanvien.Sdt));
+
+                command.Parameters.Add(new SqlParameter("@dt", nhanvien.Dantoc));
+
+                command.Parameters.Add(new SqlParameter("@tg", nhanvien.Tongiao));
+
+                command.ExecuteNonQuery();
+                command.Cancel();
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+        public static void XoaNhanVien(NhanVien nv)
+        {
+
+
+
+            string sql = "DELETE NHANVIEN  where MaNV=@manv";
+
+
+
+            using (SqlCommand command = new SqlCommand(sql, conn))
+            {
+
+
+                command.Parameters.Add(new SqlParameter("@manv", nv.Manv));
+
+                command.ExecuteNonQuery();
+
+
+
+                command.Cancel();
+            }
+
+
+
+        }
+
+
+
+
+
+
+
+        public static int checkNhanVien(string manv)
+
+        {
+
+
+
+
+
+            string sql = "select * from NHANVIEN n where ((MaNV like '%' + @text + '%'))";
+
+            using (SqlCommand command = new SqlCommand(sql, conn))
+            {
+
+
+                command.Parameters.Add(new SqlParameter("@text", manv));
+
+
+                using (SqlDataReader dataReader = command.ExecuteReader())
+
+
+                {
+
+                    if (dataReader.Read() == true)
+
+                    {
+                        return 1;
+
+                    }
+
+
+
+                }
+
+
+
+            }
+
+
+            return 0;
+        }
 
 
     }
