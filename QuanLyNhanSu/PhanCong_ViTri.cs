@@ -26,7 +26,24 @@ namespace QuanLyNhanSu
         }
 
 
+        public string MaNV1
+        {
+            get
+            {
+                return MaNV;
+            }
 
+            set
+            {
+                MaNV = value;
+            }
+        }
+        public PhanCong_ViTri(string manv, string mavt)
+        {
+            this.MaVT = mavt;
+            this.MaNV = manv;
+
+        }
 
 
 
