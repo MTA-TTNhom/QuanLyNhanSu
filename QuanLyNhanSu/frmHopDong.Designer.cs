@@ -89,6 +89,61 @@
             this.tbnXoa.Click += new System.EventHandler(this.tbnXoa_Click);
         }
 
+         // 
+            // tbnThoat
+            // 
+            this.tbnThoat.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.tbnThoat.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.tbnThoat.Location = new System.Drawing.Point(145, 416);
+            this.tbnThoat.Name = "tbnThoat";
+            this.tbnThoat.Size = new System.Drawing.Size(75, 23);
+            this.tbnThoat.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.tbnThoat.TabIndex = 4;
+            this.tbnThoat.Text = "Thoát";
+            this.tbnThoat.Click += new System.EventHandler(this.tbnThoat_Click);
+            // 
+            // tbnGiaHan
+            // 
+            this.tbnGiaHan.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.tbnGiaHan.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.tbnGiaHan.Location = new System.Drawing.Point(145, 372);
+            this.tbnGiaHan.Name = "tbnGiaHan";
+            this.tbnGiaHan.Size = new System.Drawing.Size(75, 23);
+            this.tbnGiaHan.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.tbnGiaHan.TabIndex = 5;
+            this.tbnGiaHan.Text = "Gia hạn";
+            this.tbnGiaHan.Click += new System.EventHandler(this.tbnGiaHan_Click);
+            // 
+            // tbnSua
+            // 
+            this.tbnSua.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.tbnSua.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.tbnSua.Location = new System.Drawing.Point(145, 327);
+            this.tbnSua.Name = "tbnSua";
+            this.tbnSua.Size = new System.Drawing.Size(75, 23);
+            this.tbnSua.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.tbnSua.TabIndex = 6;
+            this.tbnSua.Text = "Sửa";
+            this.tbnSua.Click += new System.EventHandler(this.tbnSua_Click);
+            // 
+            // tbnThem
+            // 
+            this.tbnThem.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.tbnThem.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.tbnThem.Location = new System.Drawing.Point(24, 327);
+            this.tbnThem.Name = "tbnThem";
+            this.tbnThem.Size = new System.Drawing.Size(75, 23);
+            this.tbnThem.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.tbnThem.TabIndex = 7;
+            this.tbnThem.Text = "Thêm";
+            this.tbnThem.Click += new System.EventHandler(this.tbnThem_Click);
+        // 
+        // labelX2
+        // 
+        // 
+        // 
+        // 
+
         #endregion
+        }
     }
-}
