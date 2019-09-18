@@ -13,7 +13,18 @@ namespace QuanLyNhanSu
         private string mavt;
 
 
+        public string Tenvt
+        {
+            get
+            {
+                return tenvt;
+            }
 
+            set
+            {
+                tenvt = value;
+            }
+        }
 
 
 
