@@ -197,6 +197,69 @@
             this.labelX6.Size = new System.Drawing.Size(75, 23);
             this.labelX6.TabIndex = 12;
             this.labelX6.Text = "Mã Nhân Viên";
+
+            // 
+            // txtTenHD
+            // 
+            // 
+            // 
+            // 
+            this.txtTenHD.Border.Class = "TextBoxBorder";
+            this.txtTenHD.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtTenHD.Location = new System.Drawing.Point(120, 87);
+            this.txtTenHD.Name = "txtTenHD";
+            this.txtTenHD.Size = new System.Drawing.Size(100, 20);
+            this.txtTenHD.TabIndex = 13;
+            // 
+            // txtTenNV
+            // 
+            // 
+            // 
+            // 
+            this.txtTenNV.Border.Class = "TextBoxBorder";
+            this.txtTenNV.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtTenNV.Location = new System.Drawing.Point(120, 120);
+            this.txtTenNV.Name = "txtTenNV";
+            this.txtTenNV.Size = new System.Drawing.Size(100, 20);
+            this.txtTenNV.TabIndex = 14;
+            this.txtTenNV.TextChanged += new System.EventHandler(this.txtTenNV_TextChanged);
+            // 
+            // txtMaNV
+            // 
+            // 
+            // 
+            // 
+            this.txtMaNV.Border.Class = "TextBoxBorder";
+            this.txtMaNV.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtMaNV.Location = new System.Drawing.Point(120, 207);
+            this.txtMaNV.Name = "txtMaNV";
+            this.txtMaNV.Size = new System.Drawing.Size(100, 20);
+            this.txtMaNV.TabIndex = 17;
+            this.txtMaNV.TextChanged += new System.EventHandler(this.txtMaNV_TextChanged);
+            // 
+            // labelX7
+            // 
+            // 
+            // 
+            // 
+            this.labelX7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX7.Location = new System.Drawing.Point(24, 233);
+            this.labelX7.Name = "labelX7";
+            this.labelX7.Size = new System.Drawing.Size(75, 23);
+            this.labelX7.TabIndex = 20;
+            this.labelX7.Text = "Mã Hợp Đồng";
+            // 
+            // txtMaHD
+            // 
+            // 
+            // 
+            // 
+            this.txtMaHD.Border.Class = "TextBoxBorder";
+            this.txtMaHD.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtMaHD.Location = new System.Drawing.Point(120, 236);
+            this.txtMaHD.Name = "txtMaHD";
+            this.txtMaHD.Size = new System.Drawing.Size(100, 20);
+            this.txtMaHD.TabIndex = 21;
         #endregion
         }
     }
