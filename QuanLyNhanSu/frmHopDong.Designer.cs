@@ -260,6 +260,72 @@
             this.txtMaHD.Name = "txtMaHD";
             this.txtMaHD.Size = new System.Drawing.Size(100, 20);
             this.txtMaHD.TabIndex = 21;
+
+            // 
+            // dateBD
+            // 
+            this.dateBD.Cursor = System.Windows.Forms.Cursors.Default;
+            this.dateBD.CustomFormat = "dd/MM/yyyy";
+            this.dateBD.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateBD.Location = new System.Drawing.Point(120, 148);
+            this.dateBD.Name = "dateBD";
+            this.dateBD.Size = new System.Drawing.Size(100, 20);
+            this.dateBD.TabIndex = 22;
+            this.dateBD.ValueChanged += new System.EventHandler(this.dateBD_ValueChanged);
+            // 
+            // dateKT
+            // 
+            this.dateKT.Cursor = System.Windows.Forms.Cursors.Default;
+            this.dateKT.CustomFormat = "dd/MM/yyyy";
+            this.dateKT.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateKT.Location = new System.Drawing.Point(120, 175);
+            this.dateKT.Name = "dateKT";
+            this.dateKT.Size = new System.Drawing.Size(100, 20);
+            this.dateKT.TabIndex = 23;
+            // 
+            // btnTV
+            // 
+            this.btnTV.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnTV.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnTV.Location = new System.Drawing.Point(24, 416);
+            this.btnTV.Name = "btnTV";
+            this.btnTV.Size = new System.Drawing.Size(75, 23);
+            this.btnTV.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnTV.TabIndex = 24;
+            this.btnTV.Text = "Thoát Tác vụ";
+            this.btnTV.Click += new System.EventHandler(this.btnTV_Click);
+            // 
+            // frmHopDong
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ClientSize = new System.Drawing.Size(944, 451);
+            this.Controls.Add(this.btnTV);
+            this.Controls.Add(this.dateKT);
+            this.Controls.Add(this.dateBD);
+            this.Controls.Add(this.txtMaHD);
+            this.Controls.Add(this.labelX7);
+            this.Controls.Add(this.txtMaNV);
+            this.Controls.Add(this.txtTenNV);
+            this.Controls.Add(this.txtTenHD);
+            this.Controls.Add(this.labelX6);
+            this.Controls.Add(this.labelX5);
+            this.Controls.Add(this.labelX4);
+            this.Controls.Add(this.labelX3);
+            this.Controls.Add(this.labelX2);
+            this.Controls.Add(this.tbnThem);
+            this.Controls.Add(this.tbnSua);
+            this.Controls.Add(this.tbnGiaHan);
+            this.Controls.Add(this.tbnThoat);
+            this.Controls.Add(this.tbnXoa);
+            this.Controls.Add(this.dgvHienThi);
+            this.Controls.Add(this.labelX1);
+            this.Name = "frmHopDong";
+            this.Text = "Hợp đồng";
+            this.Load += new System.EventHandler(this.frmHopDong_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHienThi)).EndInit();
+            this.ResumeLayout(false);
         #endregion
-        }
+    }
     }
