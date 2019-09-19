@@ -26,7 +26,18 @@ namespace QuanLyNhanSu
             }
         }
 
+        public string Mavt
+        {
+            get
+            {
+                return mavt;
+            }
 
+            set
+            {
+                mavt = value;
+            }
+        }
 
 
 
