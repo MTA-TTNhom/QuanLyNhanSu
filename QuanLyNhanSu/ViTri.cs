@@ -39,7 +39,11 @@ namespace QuanLyNhanSu
             }
         }
 
-
+        public ViTri(string mavt, string tenvt)
+        {
+            this.Tenvt = tenvt;
+            this.Mavt = mavt;
+        }
 
 
 
