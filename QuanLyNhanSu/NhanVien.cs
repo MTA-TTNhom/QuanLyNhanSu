@@ -118,5 +118,25 @@ namespace QuanLiNhanSu
         }
 
 
+        public string Tongiao
+        {
+            get
+            {
+                return tongiao;
+
+
+            }
+
+
+
+            set
+            {
+                tongiao = value;
+
+
+            }
+        }
+
+
 
 }
