@@ -178,6 +178,18 @@ namespace QuanLiNhanSu
 
         }
 
+  public string Cmt
+        {
+            get
+            {
+                return cmt;
+            }
+
+            set
+            {
+                cmt = value;
+            }
+        }
 
 
 }
