@@ -104,5 +104,19 @@ namespace QuanLiNhanSu
 
 
 
+        public string Gt
+        {
+            get
+            {
+                return gt;
+            }
+
+            set
+            {
+                gt = value;
+            }
+        }
+
+
 
 }
