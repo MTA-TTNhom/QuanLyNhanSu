@@ -12,6 +12,10 @@ namespace QuanLiNhanSu
 
 
 
+       
+        public string Tennv { get; set; }
+
+
 
 
 
