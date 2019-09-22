@@ -137,6 +137,22 @@ namespace QuanLiNhanSu
             }
         }
 
+        public string Dantoc
+        {
+            get
+            {
+                return dantoc;
+            }
+
+            set
+
+
+            {
+                dantoc = value;
+
+
+            }
+        }
 
 
 }
