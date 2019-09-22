@@ -56,4 +56,31 @@ namespace QuanLiNhanSu
 
 
 
+
+
+        public DateTime Ngaysinh
+        {
+
+
+
+            get
+            {
+                return ngaysinh;
+            }
+
+
+
+            set
+            {
+                ngaysinh = value;
+            }
+
+
+
+        }
+
+
+
+
+
 }
