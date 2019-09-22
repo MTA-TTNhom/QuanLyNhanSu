@@ -327,5 +327,26 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvHienThi)).EndInit();
             this.ResumeLayout(false);
         #endregion
+
+        private DevComponents.DotNetBar.LabelX labelX1;
+        private System.Windows.Forms.DataGridView dgvHienThi;
+        private DevComponents.DotNetBar.ButtonX tbnXoa;
+        private DevComponents.DotNetBar.ButtonX tbnThoat;
+        private DevComponents.DotNetBar.ButtonX tbnGiaHan;
+        private DevComponents.DotNetBar.ButtonX tbnSua;
+        private DevComponents.DotNetBar.ButtonX tbnThem;
+        private DevComponents.DotNetBar.LabelX labelX2;
+        private DevComponents.DotNetBar.LabelX labelX3;
+        private DevComponents.DotNetBar.LabelX labelX4;
+        private DevComponents.DotNetBar.LabelX labelX5;
+        private DevComponents.DotNetBar.LabelX labelX6;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtTenHD;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtTenNV;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtMaNV;
+        private DevComponents.DotNetBar.LabelX labelX7;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtMaHD;
+        private System.Windows.Forms.DateTimePicker dateBD;
+        private System.Windows.Forms.DateTimePicker dateKT;
+        private DevComponents.DotNetBar.ButtonX btnTV;
     }
     }
