@@ -18,6 +18,23 @@ namespace QuanLiNhanSu
 
 
 
+        public string Diachi { get; set; }
+        private DateTime ngaysinh;
+        private string bangcap;
+
+        private string gt;
+        private string mapb;
+
+        private string tongiao;
+
+        private string dantoc;
+
+        private string sdt;
+
+
+        private string cmt;
+
+
 
 
 
