@@ -388,9 +388,74 @@
             this.btnTongLuong.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnTongLuong.TabIndex = 82;
             this.btnTongLuong.Text = "Tổng Lương";
-
+            // 
+            // frmLuong_PB
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1088, 472);
+            this.Controls.Add(this.btnTongLuong);
+            this.Controls.Add(this.buttonX2);
+            this.Controls.Add(this.txtTongLuong);
+            this.Controls.Add(this.labelX9);
+            this.Controls.Add(this.txtSNTC);
+            this.Controls.Add(this.labelX8);
+            this.Controls.Add(this.txtTenNV);
+            this.Controls.Add(this.txtLuong);
+            this.Controls.Add(this.txtLuongThuong);
+            this.Controls.Add(this.txtGhichu);
+            this.Controls.Add(this.txtMaNV);
+            this.Controls.Add(this.labelX6);
+            this.Controls.Add(this.labelX5);
+            this.Controls.Add(this.labelX4);
+            this.Controls.Add(this.labelX3);
+            this.Controls.Add(this.labelX7);
+            this.Controls.Add(this.buttonX1);
+            this.Controls.Add(this.cboPB);
+            this.Controls.Add(this.btnThuong);
+            this.Controls.Add(this.dgvLuong_pb);
+            this.Controls.Add(this.labTimKiem);
+            this.Controls.Add(this.labelX1);
+            this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Name = "frmLuong_PB";
+            this.Text = "Lương theo phòng ban";
+            this.Load += new System.EventHandler(this.frmLuong_PB_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLuong_pb)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pHONGBANBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyNhanSuDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pHONGBANBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyNhanSuDataSetBindingSource)).EndInit();
+            this.ResumeLayout(false);
         }
 
         #endregion
+        private DevComponents.DotNetBar.LabelX labelX1;
+        private DevComponents.DotNetBar.LabelX labTimKiem;
+        private DevComponents.DotNetBar.Controls.DataGridViewX dgvLuong_pb;
+        private DevComponents.DotNetBar.ButtonX btnThuong;
+        private System.Windows.Forms.BindingSource quanLyNhanSuDataSetBindingSource;
+        private QuanLyNhanSuDataSet quanLyNhanSuDataSet;
+        private System.Windows.Forms.BindingSource pHONGBANBindingSource;
+        private QuanLyNhanSuDataSetTableAdapters.PHONGBANTableAdapter pHONGBANTableAdapter;
+        private System.Windows.Forms.BindingSource pHONGBANBindingSource1;
+        private DevComponents.DotNetBar.ButtonX buttonX1;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx cboPB;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtTongLuong;
+        private DevComponents.DotNetBar.LabelX labelX9;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtSNTC;
+        private DevComponents.DotNetBar.LabelX labelX8;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtTenNV;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtLuong;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtLuongThuong;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtGhichu;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtMaNV;
+        private DevComponents.DotNetBar.LabelX labelX6;
+        private DevComponents.DotNetBar.LabelX labelX5;
+        private DevComponents.DotNetBar.LabelX labelX4;
+        private DevComponents.DotNetBar.LabelX labelX3;
+        private DevComponents.DotNetBar.LabelX labelX7;
+        private DevComponents.DotNetBar.ButtonX buttonX2;
+        private DevComponents.DotNetBar.ButtonX btnTongLuong;
     }
 }
