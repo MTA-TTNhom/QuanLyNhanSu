@@ -153,6 +153,31 @@ namespace QuanLiNhanSu
 
             }
         }
+		
+        public string Sdt
+        {
+            get
+
+            {
+
+
+                return sdt;
+
+
+            }
+
+
+
+            set
+            {
+
+                sdt = value;
+
+
+            }
+
+        }
+
 
 
 }
