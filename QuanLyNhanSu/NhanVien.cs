@@ -37,6 +37,23 @@ namespace QuanLiNhanSu
 
 
 
+        //public string Macv
+        //{
+        //    get
+        //    {
+        //        return macv;
+        //    }
+
+        //    set
+        //    {
+        //        macv = value;
+        //    }
+        //}
+
+
+
+
+
 
 
 }
