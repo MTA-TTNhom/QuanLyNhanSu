@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuanLyNhanSu
+namespace QuanLiNhanSu
 {
     public partial class frmCoCauPhongBan : Form
     {
@@ -21,7 +22,7 @@ namespace QuanLyNhanSu
         public void load()
         {
 
-            SqlDataAdapter dap = new SqlDataAdapter("SELECT TENPB FROM PHONGBAN", conn);
+            SqlDataAdapter  dap = new SqlDataAdapter("SELECT TENPB FROM PHONGBAN", conn);
             var table = new DataTable();
             dap.Fill(table);
             cboPB.DisplayMember = "TenPB";
@@ -31,10 +32,10 @@ namespace QuanLyNhanSu
 
         private void cboPB_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            
             ComboBox temp = sender as ComboBox;
             string tenpb = ((temp.SelectedValue) as DataRowView).Row[0].ToString();
-            string sql = "select HoTen as N'Họ Tên', TenCV as N'Chức Vụ',TenVT, (year(getdate()) - year(NgaySinh)) as N'Tuổi' "
+            string sql = "select HoTen as N'Họ Tên', TenCV as N'Chức Vụ',TenVT, (year(getdate()) - year(NgaySinh)) as N'Tuổi' " 
                          + " from PHONGBAN p, NHANVIEN n, CHUCVU c, VITRICONGVIEC v, NHANVIEN_VITRI nv, NHANVIEN_CHUCVU nc "
                          + " where p.MaPB = n.MaPB and c.MaCV = nc.MaCV and TenPB = @tenpb and nv.MaVT = v.MaVT and nv.MaNV = n.MaNV and n.MaNV=nc.MaNV  ";
             DataTable dt = new DataTable();
@@ -57,10 +58,7 @@ namespace QuanLyNhanSu
 
         private void frmCoCauPhongBan_Load(object sender, EventArgs e)
         {
-            frmChucVu f = new frmChucVu();
-            f.Hide();
-            f.Visible = false;
-            f.Enabled = false;
+
         }
 
         private void buttonX1_Click(object sender, EventArgs e)

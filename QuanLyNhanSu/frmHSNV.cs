@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Data.OleDb;
 
-namespace QuanLyNhanSu
+namespace QuanLiNhanSu
 {
     public partial class frmHSNV : Form
     {
@@ -23,21 +23,21 @@ namespace QuanLyNhanSu
 
         private void txtTenNV_HSNV_TextChanged(object sender, EventArgs e)
         {
-            //    TextBox temp = sender as TextBox;
-            //    string tennv = temp.Text;
+        //    TextBox temp = sender as TextBox;
+        //    string tennv = temp.Text;
 
-            //    string sql = "SELECT TenNV from NHANVIEN";
-            //    DataTable dt = new DataTable();
-            //    using (SqlCommand command = new SqlCommand(sql, conn))
-            //    {
-            //        command.Parameters.Add(new SqlParameter("@macv", ten));
+        //    string sql = "SELECT TenNV from NHANVIEN";
+        //    DataTable dt = new DataTable();
+        //    using (SqlCommand command = new SqlCommand(sql, conn))
+        //    {
+        //        command.Parameters.Add(new SqlParameter("@macv", ten));
 
-            //        SqlDataAdapter da = new SqlDataAdapter(command);
-            //        da.Fill(dt);
+        //        SqlDataAdapter da = new SqlDataAdapter(command);
+        //        da.Fill(dt);
 
 
-            //    }
-            //    .DataSource = dt;
+        //    }
+        //    .DataSource = dt;
         }
 
         private void frmHSNV_Load(object sender, EventArgs e)
@@ -57,7 +57,7 @@ namespace QuanLyNhanSu
 
         private void btnback_Click(object sender, EventArgs e)
         {
-
+          
         }
     }
 }
