@@ -8,6 +8,9 @@ namespace QuanLiNhanSu
 {
     class NhanVien
     {
+ public string Manv { get; set; }
+
+
 
 
 
