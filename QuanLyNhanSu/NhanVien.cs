@@ -192,4 +192,109 @@ namespace QuanLiNhanSu
         }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+      
+
+
+
+
+
+
+
+
+
+        public string Mapb
+
+
+        {
+
+
+            get
+
+
+            {
+                return mapb;
+
+            }
+
+
+
+            set
+
+
+            {
+
+
+                mapb = value;
+
+
+            }
+
+        }
+
+
+
+
+
+        public NhanVien(string manv, string tennv, string bangcap, string gt, DateTime ngaysinh, string diachi, string mapb, string sdt, string cmt, string dantoc, string tongiao)
+        {
+
+
+            this.Manv = manv;
+
+            this.Tennv = tennv;
+
+            this.Bangcap = bangcap;
+
+            this.Gt = gt;
+
+
+            this.Ngaysinh = ngaysinh;
+
+            this.Diachi = diachi;
+
+            this.Mapb = mapb;
+
+            this.Tongiao = tongiao;
+
+            this.Dantoc = dantoc;
+
+            this.Sdt = sdt;
+
+
+            this.Cmt = cmt;
+
+
+
+
+
+
+
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+    }
+
 }
