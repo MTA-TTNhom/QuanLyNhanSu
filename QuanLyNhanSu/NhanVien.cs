@@ -80,6 +80,28 @@ namespace QuanLiNhanSu
         }
 
 
+        public string Bangcap
+        {
+
+
+
+            get
+            {
+                return bangcap;
+            }
+
+
+
+
+            set
+
+
+            {
+                bangcap = value;
+            }
+        }
+
+
 
 
 
