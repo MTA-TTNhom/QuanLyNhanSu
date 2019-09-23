@@ -26,5 +26,7 @@ namespace QuanLyNhanSu
             ConnectDatabase.ThemViTri(temp);
             dgvVT.DataSource = ConnectDatabase.getAllViTri();
         }
+
+
     }
 }
