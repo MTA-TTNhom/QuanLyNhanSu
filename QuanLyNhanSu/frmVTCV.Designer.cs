@@ -27,6 +27,12 @@ namespace QuanLyNhanSu
             dgvVT.DataSource = ConnectDatabase.getAllViTri();
         }
 
+        private void frmVTCV_Load(object sender, EventArgs e)
+        {
+            this.dgvVT.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvVT.DataSource = ConnectDatabase.getAllViTri();
+        }
+
 
     }
 }
