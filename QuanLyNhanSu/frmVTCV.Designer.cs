@@ -33,6 +33,18 @@ namespace QuanLyNhanSu
             dgvVT.DataSource = ConnectDatabase.getAllViTri();
         }
 
+        private void dgvVT_SelectionChanged(object sender, EventArgs e)
+        {
+            DataGridView table = sender as DataGridView;
+            foreach (DataGridViewRow row in table.SelectedRows)
+            {
+                txtMaVT.Text = row.Cells[0].Value.ToString();
+                txtTenVT.Text = row.Cells[1].Value.ToString();
+
+            }
+        }
+
+
 
     }
 }
