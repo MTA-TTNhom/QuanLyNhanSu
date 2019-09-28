@@ -45,6 +45,15 @@ namespace QuanLyNhanSu
         }
 
 
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            dgvVT.DataSource = ConnectDatabase.TimKiemViTri(txtTimKiem.Text);
+        }
 
+        private void btnHienThi_Click(object sender, EventArgs e)
+        {
+            frmPhanCong_ViTri f = new frmPhanCong_ViTri();
+            f.Show();
+        }
     }
 }
