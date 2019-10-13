@@ -1,111 +1,85 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
-namespace QuanLyNhanSu
+namespace QuanLiNhanSu
 {
     public partial class frmThemPB : Form
     {
         public frmThemPB()
         {
             InitializeComponent();
+            txtTenTp.ReadOnly = true;
         }
-		   public void HienThiDataGridViewComboBoxColumn(DataGridViewComboBoxColumn cmbColumn)
-
-        {
-            cmbColumn.DataSource = m_MonHocData.LayDsMonHoc();
-
-            cmbColumn.DisplayMember = "TenMonHoc";
-
-
-            cmbColumn.ValueMember = "MaMonHoc";
-
-            cmbColumn.DataPropertyName = "MaMonHoc";
-
-            cmbColumn.HeaderText = "Môn học";
-        }
-
-        public void HienThiDataGridViewComboBoxColumnGiaoVien(DataGridViewComboBoxColumn cmbColumn)
+        ConnectDatabase db = new ConnectDatabase();
+       
+        
+        public void load()
         {
 
-            cmbColumn.DataSource = m_MonHocData.LayDsMonHoc();
-            cmbColumn.DisplayMember = "TenMonHoc";
-
-            cmbColumn.ValueMember = "MaMonHoc";
-
-            cmbColumn.DataPropertyName = "MaMonHoc";
-
-            cmbColumn.HeaderText = "Chuyên môn";
-
-
+            dgvThemPB.DataSource = ConnectDatabase.getAllPhongBan();
         }
-		   public void HienThiDataGridViewComboBoxColumn(DataGridViewComboBoxColumn cmbColumn)
 
+
+
+
+        private void btnThemPB_Click(object sender, EventArgs e)
         {
-            cmbColumn.DataSource = m_MonHocData.LayDsMonHoc();
+            
+            PhongBan temp = new PhongBan(txtMaPB.Text, txtTenPB.Text, txtDiaChi.Text, txtmaTP.Text, txtTenTp.Text);
+            {
+              
+                if (ConnectDatabase.checkPhongBan(temp.Mapb) == 1)
+                {
+                    MessageBox.Show("Mã phòng ban đã tồn tại. Xin mời nhập lại!!!");
+                    return;
 
-            cmbColumn.DisplayMember = "TenMonHoc";
-
-
-            cmbColumn.ValueMember = "MaMonHoc";
-
-            cmbColumn.DataPropertyName = "MaMonHoc";
-
-            cmbColumn.HeaderText = "Môn học";
+                }
+                ConnectDatabase.ThemPhongBan(temp);
+                dgvThemPB.DataSource = ConnectDatabase.getAllPhongBan();
+                load();
+            }
         }
 
-	   public void HienThiDataGridViewComboBoxColumn(DataGridViewComboBoxColumn cmbColumn)
-
+ 
+        private void btnHuy_Click(object sender, EventArgs e)
         {
-            cmbColumn.DataSource = m_MonHocData.LayDsMonHoc();
-
-            cmbColumn.DisplayMember = "TenMonHoc";
-
-
-            cmbColumn.ValueMember = "MaMonHoc";
-
-            cmbColumn.DataPropertyName = "MaMonHoc";
-
-            cmbColumn.HeaderText = "Môn học";
+            this.Close();
         }
 
-        public void HienThiDataGridViewComboBoxColumnGiaoVien(DataGridViewComboBoxColumn cmbColumn)
+        private void btnCapNhat_Click(object sender, EventArgs e)
         {
+         
+            dgvThemPB.DataSource = ConnectDatabase.getAllPhongBan();
+        }
 
-            cmbColumn.DataSource = m_MonHocData.LayDsMonHoc();
-            cmbColumn.DisplayMember = "TenMonHoc";
-
-            cmbColumn.ValueMember = "MaMonHoc";
-
-            cmbColumn.DataPropertyName = "MaMonHoc";
-
-            cmbColumn.HeaderText = "Chuyên môn";
-
+        private void frmThemPB_Load(object sender, EventArgs e)
+        {
+            dgvThemPB.DataSource = ConnectDatabase.getAllPhongBan();
 
         }
-		   public void HienThiDataGridViewComboBoxColumn(DataGridViewComboBoxColumn cmbColumn)
 
-     
+        private void txtmaTP_TextChanged(object sender, EventArgs e)
+        {
+            txtTenTp.Text = ConnectDatabase.getTenTruongPhongTuMaTruongPhong(txtmaTP.Text);
         }
-        public void HienThiDataGridViewComboBoxColumnGiaoVien(DataGridViewComboBoxColumn cmbColumn)
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            load();
+            this.Close();
+        }
+
+        private void dgvThemPB_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            cmbColumn.DataSource = m_MonHocData.LayDsMonHoc();
-            cmbColumn.DisplayMember = "TenMonHoc";
+        }
 
-            cmbColumn.ValueMember = "MaMonHoc";
-
-            cmbColumn.DataPropertyName = "MaMonHoc";
-
-            cmbColumn.HeaderText = "Chuyên môn";
-
+        private void txtTenTp_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }
 }
+

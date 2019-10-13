@@ -12,26 +12,8 @@ namespace QuanLiNhanSu
         private string macv;
 
 
-
-
-
-
-
-
-
-
-
-
-
         public string Tencv
         {
-
-
-
-
-
-
-
             get
             {
                 return tencv;
@@ -41,27 +23,10 @@ namespace QuanLiNhanSu
             {
                 tencv = value;
             }
-
-
-
-
-
-
-
         }
 
         public string Macv
         {
-
-
-
-
-
-
-
-
-
-
             get
             {
                 return macv;
@@ -72,38 +37,10 @@ namespace QuanLiNhanSu
                 macv = value;
             }
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
         public ChucVu(string macv, string tencv)
         {
             this.Tencv = tencv;
             this.Macv = macv;
         }
-
-
-
-
-
-
     }
-
-
-
-
-
-
-
-
-
 }

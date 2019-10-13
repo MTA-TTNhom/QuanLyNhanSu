@@ -7,10 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
-namespace QuanLyNhanSu
+using System.Data.SqlClient;
+namespace QuanLiNhanSu
 {
-    public partial class frmThemChucVu : Form
+    public partial class frmThemCV : Form
     {
         public frmThemCV()
         {
@@ -22,99 +22,6 @@ namespace QuanLyNhanSu
 
 
         }
-		
-		
-        #region Hien thi ComboBox
-
-        public void HienThiComboBox(ComboBoxEx comboBox)
-
-        {
-
-            comboBox.DataSource = m_MonHocData.LayDsMonHoc();
-
-            comboBox.DisplayMember = "TenMonHoc";
-
-            comboBox.ValueMember = "MaMonHoc";
-        }
-
-
-        public void HienThiComboBox(String namHoc, String lop, ComboBoxEx comboBox)
-
-        {
-
-            MonHocData m_MHData = new MonHocData();
-
-
-            comboBox.DataSource = m_MHData.LayDsMonHoc(namHoc, lop);
-
-            comboBox.DisplayMember = "TenMonHoc";
-
-            comboBox.ValueMember = "MaMonHoc";
-
-        }
-        #endregion
-   public void HienThiDataGridViewComboBoxColumn(DataGridViewComboBoxColumn cmbColumn)
-
-        {
-            cmbColumn.DataSource = m_MonHocData.LayDsMonHoc();
-
-            cmbColumn.DisplayMember = "TenMonHoc";
-
-
-            cmbColumn.ValueMember = "MaMonHoc";
-
-            cmbColumn.DataPropertyName = "MaMonHoc";
-
-            cmbColumn.HeaderText = "Môn học";
-        }
-
-        public void HienThiDataGridViewComboBoxColumnGiaoVien(DataGridViewComboBoxColumn cmbColumn)
-        {
-
-            cmbColumn.DataSource = m_MonHocData.LayDsMonHoc();
-            cmbColumn.DisplayMember = "TenMonHoc";
-
-            cmbColumn.ValueMember = "MaMonHoc";
-
-            cmbColumn.DataPropertyName = "MaMonHoc";
-
-            cmbColumn.HeaderText = "Chuyên môn";
-
-
-        }  
-        public void HienThiDataGridViewComboBoxColumnGiaoVien(DataGridViewComboBoxColumn cmbColumn)
-        {
-
-            cmbColumn.DataSource = m_MonHocData.LayDsMonHoc();
-            cmbColumn.DisplayMember = "TenMonHoc";
-
-            cmbColumn.ValueMember = "MaMonHoc";
-
-            cmbColumn.DataPropertyName = "MaMonHoc";
-
-            cmbColumn.HeaderText = "Chuyên môn";
-
-
-        }
-
-        #region Hien thi ComboBox trong DataGridView
-
-        public void HienThiDataGridViewComboBoxColumn(DataGridViewComboBoxColumn cmbColumn)
-
-        {
-            cmbColumn.DataSource = m_MonHocData.LayDsMonHoc();
-
-            cmbColumn.DisplayMember = "TenMonHoc";
-
-
-            cmbColumn.ValueMember = "MaMonHoc";
-
-            cmbColumn.DataPropertyName = "MaMonHoc";
-
-            cmbColumn.HeaderText = "Môn học";
-        }
-
-      
         public void load()
         {
             string sql = "select *from CHUCVU";
@@ -140,50 +47,22 @@ namespace QuanLyNhanSu
 
 
             }
-
+            
         }
 
         private void btnThemCV_Click(object sender, EventArgs e)
         {
             frmThemCV form = new frmThemCV();
             form.Show();
-
-        }
-   public void HienThiDataGridViewComboBoxColumn(DataGridViewComboBoxColumn cmbColumn)
-
-        {
-            cmbColumn.DataSource = m_MonHocData.LayDsMonHoc();
-
-            cmbColumn.DisplayMember = "TenMonHoc";
-
-
-            cmbColumn.ValueMember = "MaMonHoc";
-
-            cmbColumn.DataPropertyName = "MaMonHoc";
-
-            cmbColumn.HeaderText = "Môn học";
+            
         }
 
-        public void HienThiDataGridViewComboBoxColumnGiaoVien(DataGridViewComboBoxColumn cmbColumn)
-        {
-
-            cmbColumn.DataSource = m_MonHocData.LayDsMonHoc();
-            cmbColumn.DisplayMember = "TenMonHoc";
-
-            cmbColumn.ValueMember = "MaMonHoc";
-
-            cmbColumn.DataPropertyName = "MaMonHoc";
-
-            cmbColumn.HeaderText = "Chuyên môn";
-
-
-        }
         private void txtMaCV_TextChanged_1(object sender, EventArgs e)
         {
 
         }
 
-
+      
 
         private void btnNhaplai_Click(object sender, EventArgs e)
         {
@@ -222,7 +101,7 @@ namespace QuanLyNhanSu
         {
             this.Close();
             frmMain.frm_ChucVu.Show();
-
+            
         }
 
         private void btnThemCV_Click_2(object sender, EventArgs e)

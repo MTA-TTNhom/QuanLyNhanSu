@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuanLyNhanSu
-{
+namespace QuanLiNhanSu
+{   
     public partial class frmPhanCong_ViTri : Form
     {
         SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-UJHK73G\SQLEXPRESS;Initial Catalog=QuanLyNhanSu1;Integrated Security=True");
@@ -17,7 +18,7 @@ namespace QuanLyNhanSu
         public frmPhanCong_ViTri()
         {
             InitializeComponent();
-
+            
         }
         public void load()
         {
@@ -30,7 +31,7 @@ namespace QuanLyNhanSu
             comboBoxEx1.DataSource = table;
         }
 
-
+        
         private void btnHienThi_Click(object sender, EventArgs e)
         {
             dgvPCVT.DataSource = ConnectDatabase.PhanCongViTri();
@@ -76,7 +77,7 @@ namespace QuanLyNhanSu
 
         private void txtTenNV_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void txtMaNV_TextChanged(object sender, EventArgs e)
@@ -89,7 +90,7 @@ namespace QuanLyNhanSu
             txtTenVT.Text = ConnectDatabase.getTenViTriTuMaViTri(txtMaVT.Text);
         }
 
-
+        
 
         private void comboBoxEx1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -111,5 +112,7 @@ namespace QuanLyNhanSu
         {
             load();
         }
+
+        
     }
 }

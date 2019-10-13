@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Data.OleDb;
 
-namespace QuanLyNhanSu
+namespace QuanLiNhanSu
 {
     public partial class frmLuong_PB : Form
     {
@@ -47,12 +47,12 @@ namespace QuanLyNhanSu
             SqlDataAdapter dap = new SqlDataAdapter(sql, conn);
             DataTable dt = new DataTable();
             dap.Fill(dt);
-
+            
         }
 
         private void txtTK_TextChanged(object sender, EventArgs e)
         {
-
+            
 
 
             //TextBox temp = sender as TextBox;
@@ -75,9 +75,9 @@ namespace QuanLyNhanSu
 
         private void frmLuong_PB_Load(object sender, EventArgs e)
         {
-            this.dgvLuong_pb.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            //    this.pHONGBANTableAdapter.Fill(this.quanLyNhanSuDataSet.PHONGBAN);
-            //    dgvLuong_pb.DataSource = ConnectDatabase.GetAllLuong_PB();
+           this.dgvLuong_pb.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+        //    this.pHONGBANTableAdapter.Fill(this.quanLyNhanSuDataSet.PHONGBAN);
+        //    dgvLuong_pb.DataSource = ConnectDatabase.GetAllLuong_PB();
 
         }
         public void load()
@@ -118,7 +118,7 @@ namespace QuanLyNhanSu
 
         private void txtTenPB_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -127,7 +127,7 @@ namespace QuanLyNhanSu
 
         private void labelX8_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         //private void btnHienThi_Click(object sender, EventArgs e)
@@ -165,10 +165,10 @@ namespace QuanLyNhanSu
 
         private void btnThuong_Click(object sender, EventArgs e)
         {
-
+           
             Luong temp = new Luong(txtMaNV.Text, txtLuong.Text, txtLuongThuong.Text, txtGhichu.Text, txtSNTC.Text, txtTongLuong.Text);
             ConnectDatabase.SuaLuong_NV(temp);
-            dgvLuong_pb.DataSource = ConnectDatabase.GetAllLuong_NV();
+            dgvLuong_pb.DataSource= ConnectDatabase.GetAllLuong_NV();
         }
 
         private void dgvLuong_pb_CellContentClick(object sender, DataGridViewCellEventArgs e)

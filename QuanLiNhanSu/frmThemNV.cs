@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuanLyNhanSu
+namespace QuanLiNhanSu
 {
     public partial class frmThemNV : Form
     {
@@ -32,19 +32,19 @@ namespace QuanLyNhanSu
                     return;
 
                 }
-                ConnectDatabase.ThemNhanVien(temp);
-                dgvThemNV.DataSource = ConnectDatabase.getAllNhanVien();
-                load();
+              ConnectDatabase.ThemNhanVien(temp);
+              dgvThemNV.DataSource = ConnectDatabase.getAllNhanVien();
+              load();
             }
-
+           
 
         }
 
-
+        
 
         private void dgvThemNV_SelectionChanged(object sender, EventArgs e)
         {
-
+            
             DataGridView table = sender as DataGridView;
             foreach (DataGridViewRow row in table.SelectedRows)
             {
@@ -59,20 +59,20 @@ namespace QuanLyNhanSu
                 txtSDT.Text = row.Cells[8].Value.ToString();
                 txtDT.Text = row.Cells[9].Value.ToString();
                 txtTG.Text = row.Cells[10].Value.ToString();
-
+                
 
             }
         }
 
         private void dgvThemNV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            
             dgvThemNV.DataSource = ConnectDatabase.getAllNhanVien();
         }
 
         private void btnHienThi_Click(object sender, EventArgs e)
         {
-
+            
             dgvThemNV.DataSource = ConnectDatabase.getAllNhanVien();
         }
 

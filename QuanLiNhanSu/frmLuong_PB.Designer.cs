@@ -1,4 +1,4 @@
-﻿namespace QuanLyNhanSu
+﻿namespace QuanLiNhanSu
 {
     partial class frmLuong_PB
     {
@@ -427,6 +427,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pHONGBANBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.quanLyNhanSuDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
+
         }
 
         #endregion

@@ -1,0 +1,716 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{68D9D970-6F5A-410A-9B8A-4B601F031023}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QuanLiNhanSu</RootNamespace>
+    <AssemblyName>QuanLiNhanSu</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2, Version=11.2.0.1, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.Compatibility" />
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="cboPB.cs" />
+    <Compile Include="ConnectDatabase.cs" />
+    <Compile Include="DangNhap.cs" />
+    <Compile Include="DoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoiMatKhau.Designer.cs">
+      <DependentUpon>DoiMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChucVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChucVu.Designer.cs">
+      <DependentUpon>frmChucVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCoCauPhongBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCoCauPhongBan.Designer.cs">
+      <DependentUpon>frmCoCauPhongBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHopDong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHopDong.Designer.cs">
+      <DependentUpon>frmHopDong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHSNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHSNV.Designer.cs">
+      <DependentUpon>frmHSNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLuong_CaNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLuong_CaNhan.Designer.cs">
+      <DependentUpon>frmLuong_CaNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLuong_PB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLuong_PB.Designer.cs">
+      <DependentUpon>frmLuong_PB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDangNhap.Designer.cs">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNhanVien.Designer.cs">
+      <DependentUpon>frmNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPhanCong_ViTri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPhanCong_ViTri.Designer.cs">
+      <DependentUpon>frmPhanCong_ViTri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPhongBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPhongBan.Designer.cs">
+      <DependentUpon>frmPhongBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThemChucVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThemChucVu.Designer.cs">
+      <DependentUpon>frmThemChucVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThemNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThemNV.Designer.cs">
+      <DependentUpon>frmThemNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThemTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThemTaiKhoan.Designer.cs">
+      <DependentUpon>frmThemTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTroGiup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTroGiup.Designer.cs">
+      <DependentUpon>frmTroGiup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVTCV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVTCV.Designer.cs">
+      <DependentUpon>frmVTCV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HopDong.cs" />
+    <Compile Include="HSNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HSNV.Designer.cs">
+      <DependentUpon>HSNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Luong.cs" />
+    <Compile Include="PhanCong_ViTri.cs" />
+    <Compile Include="PhongBan.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanLyNhanSu1DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyNhanSu1DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyNhanSuDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyNhanSuDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmThemPB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThemPB.Designer.cs">
+      <DependentUpon>frmThemPB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChucVu.cs" />
+    <Compile Include="NhanVien.cs" />
+    <Compile Include="QuanLyNhanSuDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyNhanSuDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SYLL.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SYLL.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ViTri.cs" />
+    <EmbeddedResource Include="DoiMatKhau.resx">
+      <DependentUpon>DoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChucVu.resx">
+      <DependentUpon>frmChucVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCoCauPhongBan.resx">
+      <DependentUpon>frmCoCauPhongBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHopDong.resx">
+      <DependentUpon>frmHopDong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHSNV.resx">
+      <DependentUpon>frmHSNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLuong_CaNhan.resx">
+      <DependentUpon>frmLuong_CaNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLuong_PB.resx">
+      <DependentUpon>frmLuong_PB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDangNhap.resx">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNhanVien.resx">
+      <DependentUpon>frmNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPhanCong_ViTri.resx">
+      <DependentUpon>frmPhanCong_ViTri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPhongBan.resx">
+      <DependentUpon>frmPhongBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThemChucVu.resx">
+      <DependentUpon>frmThemChucVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThemNV.resx">
+      <DependentUpon>frmThemNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThemTaiKhoan.resx">
+      <DependentUpon>frmThemTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTroGiup.resx">
+      <DependentUpon>frmTroGiup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVTCV.resx">
+      <DependentUpon>frmVTCV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HSNV.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HSNV.resx">
+      <DependentUpon>HSNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="frmThemPB.resx">
+      <DependentUpon>frmThemPB.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="SYLL.xsc">
+      <DependentUpon>SYLL.xsd</DependentUpon>
+    </None>
+    <None Include="SYLL.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SYLL.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SYLL.xss">
+      <DependentUpon>SYLL.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="QuanLyNhanSu1DataSet.xsc">
+      <DependentUpon>QuanLyNhanSu1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyNhanSu1DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyNhanSu1DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyNhanSu1DataSet.xss">
+      <DependentUpon>QuanLyNhanSu1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyNhanSuDataSet.xsc">
+      <DependentUpon>QuanLyNhanSuDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyNhanSuDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyNhanSuDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyNhanSuDataSet.xss">
+      <DependentUpon>QuanLyNhanSuDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyNhanSuDataSet1.xsc">
+      <DependentUpon>QuanLyNhanSuDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyNhanSuDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyNhanSuDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyNhanSuDataSet1.xss">
+      <DependentUpon>QuanLyNhanSuDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\button_plus_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\keys.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\keys1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_badge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_badge1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_badge2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-phong-ban.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-phong-ban1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gnome_preferences_system.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list_add_user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list_add_user1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gnome_preferences_system1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gnome_preferences_system2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list_add_user2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nhanvien.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_employee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_add1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deletered.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\show_property.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_employee %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\business_people_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\business_people_011.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\business_people_012.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_group.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\package_installed_locked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\package_available_locked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\package_available_locked1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_arrow_round_change.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_group1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_group %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_man.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mail_new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\package_installed_locked1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quan-ly-nhan-su-tien-luong-hieu-qua-fpts.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\main.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quan-ly-nhan-su-tien-luong-hieu-qua-fpts1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backup_server.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_updates.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_male_add2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_male_add21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_male_add22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_male_add23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jpg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\package_installed_locked2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\package_available_locked2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_plus_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dialog_question.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jpg1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jpg2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jpg11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text_directory.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\business_people_013.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\default_document.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\default_document1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\default_document2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backward1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backward2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\13237800_506863266163514_5707257954116519100_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tải xuống.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HR_ESS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gnome_media_floppy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gnome_media_floppy1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_updates1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\preferences_contact_list %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mail_new1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contact_new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gnome_edit_delete %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\modify.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kappfinder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list_all_participants.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disk_dark_apple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text_directory1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kappfinder1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kappfinder2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kappfinder3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tick1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\preferences_contact_list %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list_add_user3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list_add_user4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_female_remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_plus_red1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_arrow_round_change1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tick2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_arrow_round_change2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_female_remove1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lists.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\package_installed_locked3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\package_available_locked3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\package_available_locked21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_plus_red2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_arrow_round_change3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dialog_question1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\symbol_help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tinh.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gettyimages-638562622-170x170.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gettyimages-638562622-170x1701.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contract2_pencil.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

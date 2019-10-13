@@ -1,6 +1,6 @@
-﻿namespace QuanLyNhanSu
+﻿namespace QuanLiNhanSu
 {
-    partial class frmThemChucVu
+    partial class frmThemCV
     {
         /// <summary>
         /// Required designer variable.

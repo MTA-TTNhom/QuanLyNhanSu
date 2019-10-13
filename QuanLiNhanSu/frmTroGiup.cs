@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuanLyNhanSu
+namespace QuanLiNhanSu
 {
     public partial class frmTroGiup : Form
     {
@@ -16,12 +16,10 @@ namespace QuanLyNhanSu
         {
             InitializeComponent();
         }
-		   public void HienThiDataGridViewComboBoxColumn(DataGridViewComboBoxColumn cmbColumn)
 
+        private void labelX1_Click(object sender, EventArgs e)
         {
-            cmbColumn.DataSource = m_MonHocData.LayDsMonHoc();
 
         }
-		
     }
 }

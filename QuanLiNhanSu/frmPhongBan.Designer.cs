@@ -1,4 +1,4 @@
-﻿namespace QuanLyNhanSu
+﻿namespace QuanLiNhanSu
 {
     partial class frmPhongBan
     {
@@ -52,12 +52,12 @@
             this.btnHienThi = new DevComponents.DotNetBar.ButtonX();
             this.btnSuaPB = new DevComponents.DotNetBar.ButtonX();
             this.btnThemPB = new DevComponents.DotNetBar.ButtonX();
-            //    this.toolStripMenuItemArray1 = new Microsoft.VisualBasic.Compatibility.VB6.ToolStripMenuItemArray(this.components);
+        //    this.toolStripMenuItemArray1 = new Microsoft.VisualBasic.Compatibility.VB6.ToolStripMenuItemArray(this.components);
             this.labTimKiem = new DevComponents.DotNetBar.LabelX();
             this.btnCCPB = new DevComponents.DotNetBar.ButtonX();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhongBan)).BeginInit();
             this.groupBox2.SuspendLayout();
-            //            ((System.ComponentModel.ISupportInitialize)(this.toolStripMenuItemArray1)).BeginInit();
+//            ((System.ComponentModel.ISupportInitialize)(this.toolStripMenuItemArray1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtRimKiem
@@ -398,7 +398,7 @@
             this.Load += new System.EventHandler(this.frmPhongBan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhongBan)).EndInit();
             this.groupBox2.ResumeLayout(false);
-            //            ((System.ComponentModel.ISupportInitialize)(this.toolStripMenuItemArray1)).EndInit();
+//            ((System.ComponentModel.ISupportInitialize)(this.toolStripMenuItemArray1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -415,7 +415,7 @@
         private DevComponents.DotNetBar.Controls.TextBoxX txtdiadiem;
         private DevComponents.DotNetBar.LabelX labelX6;
         private DevComponents.DotNetBar.ButtonX btnTrolai;
-        //      private DevComponents.DotNetBar.Controls.ComboBoxEx cboPB;
+  //      private DevComponents.DotNetBar.Controls.ComboBoxEx cboPB;
         private DevComponents.DotNetBar.ButtonX btnXoaPB;
         private DevComponents.DotNetBar.ButtonX btnHienThi;
         private DevComponents.DotNetBar.ButtonX btnSuaPB;
@@ -427,7 +427,7 @@
         private DevComponents.DotNetBar.LabelX labelX5;
         private System.Windows.Forms.GroupBox groupBox2;
         private DevComponents.DotNetBar.Controls.TextBoxX txtTenPB;
-        //  private Microsoft.VisualBasic.Compatibility.VB6.ToolStripMenuItemArray toolStripMenuItemArray1;
+      //  private Microsoft.VisualBasic.Compatibility.VB6.ToolStripMenuItemArray toolStripMenuItemArray1;
         private DevComponents.DotNetBar.ButtonX btnCCPB;
     }
 }

@@ -14,11 +14,11 @@ namespace QuanLiNhanSu
     class ConnectDatabase
     {
         static SqlConnection conn;
-
+     
 
         public static void ConnectDB()
         {
-            conn = new SqlConnection(@"Data Source=DESKTOP-UJHK73G\SQLEXPRESS;Initial Catalog=QuanLyNhanSu1;Integrated Security=True");
+            conn = new SqlConnection(@"Data Source=THIEN-PC\SQLEXPRESS;Initial Catalog=QuanLyNhanSu1;Integrated Security=True");
             conn.Open();
         }
         //SqlCommand sqlcom;
@@ -81,7 +81,7 @@ namespace QuanLiNhanSu
                 command.Cancel();
             }
         }
-
+      
 
         //----------------------------------PHÒNG BAN-------------------------------------
         public static DataTable getAllPhongBan()
@@ -228,7 +228,7 @@ namespace QuanLiNhanSu
             using (SqlCommand command = new SqlCommand(sql, conn))
             {
                 command.Parameters.Add(new SqlParameter("@matp", matp));
-                using (SqlDataReader dataReader = command.ExecuteReader())
+                using (SqlDataReader dataReader = command.ExecuteReader()) 
                 {
 
                     if (dataReader.Read() == true)
@@ -304,7 +304,7 @@ namespace QuanLiNhanSu
             adapter.Fill(sttable);
             return sttable;
         }
-
+      
 
         public static void ThemNhanVien(NhanVien nhanvien)
         {
@@ -339,8 +339,8 @@ namespace QuanLiNhanSu
 
             }
         }
-
-
+        
+        
         public static void SuaNhanVien(NhanVien nhanvien)
         {
             string sql = "UPDATE NHANVIEN set HoTen=@tennv, DiaChi=@diadiem, CMTND=@cmt, SDT=@sdt, DanToc=@dt, TonGiao=@tg, BangCap=@bangcap, MaPB=@mapb, GioiTinh=@gioitinh, NgaySinh=CONVERT(date, @ngaysinh, 111) where MaNV=@manv";
@@ -536,7 +536,7 @@ namespace QuanLiNhanSu
                 command.ExecuteNonQuery();
                 command.Cancel();
 
-
+              
             }
         }
         public static void SuaChucVu(ChucVu cv)
@@ -560,7 +560,7 @@ namespace QuanLiNhanSu
                 command.Parameters.Add(new SqlParameter("@macv", chucvu.Macv));
                 command.Parameters.Add(new SqlParameter("@tencv", chucvu.Tencv));
 
-
+                
                 int kq = command.ExecuteNonQuery();
                 if (kq > 0)
                 {
@@ -742,7 +742,7 @@ namespace QuanLiNhanSu
         }
         public static int checkViTri(string maVT)
         {
-
+   
             string sql = "select * from ViTRICONGVIEC v where (TenVT like '%'+@text+'%') or (MaVT like '%'+@text+'%') ";
             using (SqlCommand command = new SqlCommand(sql, conn))
             {
@@ -831,8 +831,8 @@ namespace QuanLiNhanSu
         //    {
         //        command.Parameters.Add(new SqlParameter("@mavt", p.MaVT1));
         //        command.Parameters.Add(new SqlParameter("@manv", p.MaNV1));
-
-
+         
+               
 
         //        int kq = command.ExecuteNonQuery();
         //        if (kq > 0)
@@ -844,5 +844,5 @@ namespace QuanLiNhanSu
         //    }
 
 
+        }
     }
-}

@@ -4,16 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QuanLyNhanSu
+namespace QuanLiNhanSu
 {
     class PhongBan
     {
-
         private string mapb;
         private string tenpb;
         private string diachi;
         private string matp;
         private string tentp;
+
 
         public string Mapb
         {
@@ -40,7 +40,6 @@ namespace QuanLyNhanSu
                 tenpb = value;
             }
         }
-
 
         public string Diachi
         {
@@ -80,7 +79,6 @@ namespace QuanLyNhanSu
                 tentp = value;
             }
         }
-
         public PhongBan()
         {
 
@@ -93,100 +91,5 @@ namespace QuanLyNhanSu
             this.Matp = matp;
             this.Tentp = tentp;
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }

@@ -4,14 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QuanLyNhanSu
+namespace QuanLiNhanSu
 {
     class ViTri
     {
-
         private string tenvt;
         private string mavt;
-
 
         public string Tenvt
         {
@@ -38,18 +36,10 @@ namespace QuanLyNhanSu
                 mavt = value;
             }
         }
-
         public ViTri(string mavt, string tenvt)
         {
             this.Tenvt = tenvt;
             this.Mavt = mavt;
         }
-
-
-
-
-
-
-
     }
 }

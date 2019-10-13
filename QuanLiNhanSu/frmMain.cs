@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuanLyNhanSu
+namespace QuanLiNhanSu
 {
     public partial class frmMain : Form
     {
@@ -168,7 +168,7 @@ namespace QuanLyNhanSu
 
         private void ribbonTabItem6_Click(object sender, EventArgs e)
         {
-
+           
         }
 
         private void đổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
@@ -242,6 +242,5 @@ namespace QuanLyNhanSu
             frmHopDong frm = new frmHopDong();
             frm.Show();
         }
-
     }
 }

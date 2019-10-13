@@ -2,84 +2,23 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuanLyNhanSu
+namespace QuanLiNhanSu
 {
     public partial class frmPhongBan : Form
     {
         public frmPhongBan()
         {
             InitializeComponent();
-
+            
         }
 
-        #region Hien thi ComboBox
-
-        public void HienThiComboBox(ComboBoxEx comboBox)
-
-        {
-
-            comboBox.DataSource = m_MonHocData.LayDsMonHoc();
-
-            comboBox.DisplayMember = "TenMonHoc";
-
-            comboBox.ValueMember = "MaMonHoc";
-        }
-
-
-        public void HienThiComboBox(String namHoc, String lop, ComboBoxEx comboBox)
-
-        {
-
-            MonHocData m_MHData = new MonHocData();
-
-
-            comboBox.DataSource = m_MHData.LayDsMonHoc(namHoc, lop);
-
-            comboBox.DisplayMember = "TenMonHoc";
-
-            comboBox.ValueMember = "MaMonHoc";
-
-        }
-        #endregion
-
-
-        #region Hien thi ComboBox trong DataGridView
-
-        public void HienThiDataGridViewComboBoxColumn(DataGridViewComboBoxColumn cmbColumn)
-
-        {
-            cmbColumn.DataSource = m_MonHocData.LayDsMonHoc();
-
-            cmbColumn.DisplayMember = "TenMonHoc";
-
-
-            cmbColumn.ValueMember = "MaMonHoc";
-
-            cmbColumn.DataPropertyName = "MaMonHoc";
-
-            cmbColumn.HeaderText = "Môn học";
-        }
-
-        public void HienThiDataGridViewComboBoxColumnGiaoVien(DataGridViewComboBoxColumn cmbColumn)
-        {
-
-            cmbColumn.DataSource = m_MonHocData.LayDsMonHoc();
-            cmbColumn.DisplayMember = "TenMonHoc";
-
-            cmbColumn.ValueMember = "MaMonHoc";
-
-            cmbColumn.DataPropertyName = "MaMonHoc";
-
-            cmbColumn.HeaderText = "Chuyên môn";
-
-
-        }
         private void txtRimKiem_TextChanged(object sender, EventArgs e)
         {
             dgvPhongBan.DataSource = ConnectDatabase.timKiemPhongBan(txtRimKiem.Text);
@@ -98,7 +37,7 @@ namespace QuanLyNhanSu
         }
 
         private void btnHienThi_Click(object sender, EventArgs e)
-        {
+        {       
             dgvPhongBan.DataSource = ConnectDatabase.getAllPhongBan();
         }
 
@@ -118,12 +57,12 @@ namespace QuanLyNhanSu
 
         private void btnSuaPB_Click(object sender, EventArgs e)
         {
-
-
-            PhongBan temp = new PhongBan(txtMPB.Text, txtTenPB.Text, txtdiadiem.Text, txtmaTP.Text, txtTenTP.Text);
-            ConnectDatabase.SuaPhongBan(temp);
-            dgvPhongBan.DataSource = ConnectDatabase.getAllPhongBan();
-
+          
+               
+                PhongBan temp = new PhongBan(txtMPB.Text, txtTenPB.Text, txtdiadiem.Text, txtmaTP.Text, txtTenTP.Text);
+                ConnectDatabase.SuaPhongBan(temp);
+                dgvPhongBan.DataSource = ConnectDatabase.getAllPhongBan();
+            
 
         }
 
@@ -141,14 +80,14 @@ namespace QuanLyNhanSu
             }
         }
 
-
+       
 
         private void cboPB_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
 
-
+    
 
         private void labTimKiem_Click(object sender, EventArgs e)
         {
@@ -162,7 +101,7 @@ namespace QuanLyNhanSu
 
         private void txtmaTP_TextChanged(object sender, EventArgs e)
         {
-            txtTenTP.Text = ConnectDatabase.getTenTruongPhongTuMaTruongPhong(txtmaTP.Text);
+           txtTenTP.Text = ConnectDatabase.getTenTruongPhongTuMaTruongPhong(txtmaTP.Text);
         }
 
         private void btnTrolai_Click(object sender, EventArgs e)
@@ -175,5 +114,7 @@ namespace QuanLyNhanSu
             frmCoCauPhongBan frm = new frmCoCauPhongBan();
             frm.Show();
         }
+
+
     }
 }
