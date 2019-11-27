@@ -44,7 +44,12 @@ namespace QuanLyNhanSu
             this.MaNV = manv;
 
         }
+        public PhanCong_ViTri(PhanCong_ViTri pc)
+        {
+            this.MaVT = pc.MaVT;
+            this.MaNV = pc.MaNV;
 
+        }
 
 
 
