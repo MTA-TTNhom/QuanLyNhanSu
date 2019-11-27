@@ -16,5 +16,35 @@ namespace QuanLyNhanSu
         {
             InitializeComponent();
         }
+		   public void HienThiDataGridViewComboBoxColumn(DataGridViewComboBoxColumn cmbColumn)
+
+        {
+            cmbColumn.DataSource = m_MonHocData.LayDsMonHoc();
+
+            cmbColumn.DisplayMember = "TenMonHoc";
+
+
+            cmbColumn.ValueMember = "MaMonHoc";
+
+            cmbColumn.DataPropertyName = "MaMonHoc";
+
+            cmbColumn.HeaderText = "Môn học";
+        }
+
+        public void HienThiDataGridViewComboBoxColumnGiaoVien(DataGridViewComboBoxColumn cmbColumn)
+        {
+
+            cmbColumn.DataSource = m_MonHocData.LayDsMonHoc();
+            cmbColumn.DisplayMember = "TenMonHoc";
+
+            cmbColumn.ValueMember = "MaMonHoc";
+
+            cmbColumn.DataPropertyName = "MaMonHoc";
+
+            cmbColumn.HeaderText = "Chuyên môn";
+
+
+        }
+
     }
 }

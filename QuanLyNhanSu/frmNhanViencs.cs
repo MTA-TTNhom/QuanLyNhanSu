@@ -24,7 +24,91 @@ namespace QuanLyNhanSu
             dgvNhanVien.DataSource = ConnectDatabase.getAllNhanVien();
 
         }
+   public void HienThiDataGridViewComboBoxColumn(DataGridViewComboBoxColumn cmbColumn)
 
+        {
+            cmbColumn.DataSource = m_MonHocData.LayDsMonHoc();
+
+            cmbColumn.DisplayMember = "TenMonHoc";
+
+
+            cmbColumn.ValueMember = "MaMonHoc";
+
+            cmbColumn.DataPropertyName = "MaMonHoc";
+
+            cmbColumn.HeaderText = "Môn học";
+        }
+
+        public void HienThiDataGridViewComboBoxColumnGiaoVien(DataGridViewComboBoxColumn cmbColumn)
+        {
+
+            cmbColumn.DataSource = m_MonHocData.LayDsMonHoc();
+            cmbColumn.DisplayMember = "TenMonHoc";
+
+            cmbColumn.ValueMember = "MaMonHoc";
+
+            cmbColumn.DataPropertyName = "MaMonHoc";
+
+            cmbColumn.HeaderText = "Chuyên môn";
+
+
+        }   public void HienThiDataGridViewComboBoxColumn(DataGridViewComboBoxColumn cmbColumn)
+
+        {
+            cmbColumn.DataSource = m_MonHocData.LayDsMonHoc();
+
+            cmbColumn.DisplayMember = "TenMonHoc";
+
+
+            cmbColumn.ValueMember = "MaMonHoc";
+
+            cmbColumn.DataPropertyName = "MaMonHoc";
+
+            cmbColumn.HeaderText = "Môn học";
+        }
+
+        public void HienThiDataGridViewComboBoxColumnGiaoVien(DataGridViewComboBoxColumn cmbColumn)
+        {
+
+            cmbColumn.DataSource = m_MonHocData.LayDsMonHoc();
+            cmbColumn.DisplayMember = "TenMonHoc";
+
+            cmbColumn.ValueMember = "MaMonHoc";
+
+            cmbColumn.DataPropertyName = "MaMonHoc";
+
+            cmbColumn.HeaderText = "Chuyên môn";
+
+
+        }   public void HienThiDataGridViewComboBoxColumn(DataGridViewComboBoxColumn cmbColumn)
+
+        {
+            cmbColumn.DataSource = m_MonHocData.LayDsMonHoc();
+
+            cmbColumn.DisplayMember = "TenMonHoc";
+
+
+            cmbColumn.ValueMember = "MaMonHoc";
+
+            cmbColumn.DataPropertyName = "MaMonHoc";
+
+            cmbColumn.HeaderText = "Môn học";
+        }
+
+        public void HienThiDataGridViewComboBoxColumnGiaoVien(DataGridViewComboBoxColumn cmbColumn)
+        {
+
+            cmbColumn.DataSource = m_MonHocData.LayDsMonHoc();
+            cmbColumn.DisplayMember = "TenMonHoc";
+
+            cmbColumn.ValueMember = "MaMonHoc";
+
+            cmbColumn.DataPropertyName = "MaMonHoc";
+
+            cmbColumn.HeaderText = "Chuyên môn";
+
+
+        }
         private void HSNVToolStripMenuItem_Click(object sender, EventArgs e)
         {
             HSNV frm = new HSNV();
@@ -40,7 +124,63 @@ namespace QuanLyNhanSu
         {
             dgvNhanVien.DataSource = ConnectDatabase.TimKiemNhanVien(txtTimKiem.Text);
         }
+   public void HienThiDataGridViewComboBoxColumn(DataGridViewComboBoxColumn cmbColumn)
 
+        {
+            cmbColumn.DataSource = m_MonHocData.LayDsMonHoc();
+
+            cmbColumn.DisplayMember = "TenMonHoc";
+
+
+            cmbColumn.ValueMember = "MaMonHoc";
+
+            cmbColumn.DataPropertyName = "MaMonHoc";
+
+            cmbColumn.HeaderText = "Môn học";
+        }
+
+        public void HienThiDataGridViewComboBoxColumnGiaoVien(DataGridViewComboBoxColumn cmbColumn)
+        {
+
+            cmbColumn.DataSource = m_MonHocData.LayDsMonHoc();
+            cmbColumn.DisplayMember = "TenMonHoc";
+
+            cmbColumn.ValueMember = "MaMonHoc";
+
+            cmbColumn.DataPropertyName = "MaMonHoc";
+
+            cmbColumn.HeaderText = "Chuyên môn";
+
+
+        }   public void HienThiDataGridViewComboBoxColumn(DataGridViewComboBoxColumn cmbColumn)
+
+        {
+            cmbColumn.DataSource = m_MonHocData.LayDsMonHoc();
+
+            cmbColumn.DisplayMember = "TenMonHoc";
+
+
+            cmbColumn.ValueMember = "MaMonHoc";
+
+            cmbColumn.DataPropertyName = "MaMonHoc";
+
+            cmbColumn.HeaderText = "Môn học";
+        }
+
+        public void HienThiDataGridViewComboBoxColumnGiaoVien(DataGridViewComboBoxColumn cmbColumn)
+        {
+
+            cmbColumn.DataSource = m_MonHocData.LayDsMonHoc();
+            cmbColumn.DisplayMember = "TenMonHoc";
+
+            cmbColumn.ValueMember = "MaMonHoc";
+
+            cmbColumn.DataPropertyName = "MaMonHoc";
+
+            cmbColumn.HeaderText = "Chuyên môn";
+
+
+        }
         private void danhSáchNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmThemNV frm = new frmThemNV();

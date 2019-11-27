@@ -8,19 +8,12 @@ namespace QuanLiNhanSu
 {
     class NhanVien
     {
+ public string Manv { get; set; }
 
 
 
-
-        public string Manv { get; set; }
-
-
-
+       
         public string Tennv { get; set; }
-
-
-
-
 
 
 
@@ -40,7 +33,6 @@ namespace QuanLiNhanSu
 
 
         private string cmt;
-
 
 
 
@@ -88,7 +80,6 @@ namespace QuanLiNhanSu
         }
 
 
-
         public string Bangcap
         {
 
@@ -110,6 +101,9 @@ namespace QuanLiNhanSu
             }
         }
 
+
+
+
         public string Gt
         {
             get
@@ -122,7 +116,6 @@ namespace QuanLiNhanSu
                 gt = value;
             }
         }
-
 
 
         public string Tongiao
@@ -160,7 +153,7 @@ namespace QuanLiNhanSu
 
             }
         }
-
+		
         public string Sdt
         {
             get
@@ -185,7 +178,7 @@ namespace QuanLiNhanSu
 
         }
 
-        public string Cmt
+  public string Cmt
         {
             get
             {
@@ -198,6 +191,20 @@ namespace QuanLiNhanSu
             }
         }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
 
 
 
@@ -289,11 +296,5 @@ namespace QuanLiNhanSu
 
 
     }
-
-
-
-
-
-
 
 }

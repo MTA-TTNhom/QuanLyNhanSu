@@ -1,4 +1,4 @@
-﻿namespace QuanLyNhanSu
+﻿namespace QuanLiNhanSu
 {
     partial class frmHopDong
     {
@@ -87,9 +87,7 @@
             this.tbnXoa.TabIndex = 2;
             this.tbnXoa.Text = "Xóa";
             this.tbnXoa.Click += new System.EventHandler(this.tbnXoa_Click);
-        }
-
-         // 
+            // 
             // tbnThoat
             // 
             this.tbnThoat.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
@@ -137,13 +135,13 @@
             this.tbnThem.TabIndex = 7;
             this.tbnThem.Text = "Thêm";
             this.tbnThem.Click += new System.EventHandler(this.tbnThem_Click);
-        // 
-        // labelX2
-        // 
-        // 
-        // 
-        // 
-        this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // labelX2
+            // 
+            // 
+            // 
+            // 
+            this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX2.Location = new System.Drawing.Point(24, 85);
             this.labelX2.Name = "labelX2";
             this.labelX2.Size = new System.Drawing.Size(75, 23);
@@ -197,7 +195,6 @@
             this.labelX6.Size = new System.Drawing.Size(75, 23);
             this.labelX6.TabIndex = 12;
             this.labelX6.Text = "Mã Nhân Viên";
-
             // 
             // txtTenHD
             // 
@@ -260,7 +257,6 @@
             this.txtMaHD.Name = "txtMaHD";
             this.txtMaHD.Size = new System.Drawing.Size(100, 20);
             this.txtMaHD.TabIndex = 21;
-
             // 
             // dateBD
             // 
@@ -326,6 +322,9 @@
             this.Load += new System.EventHandler(this.frmHopDong_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvHienThi)).EndInit();
             this.ResumeLayout(false);
+
+        }
+
         #endregion
 
         private DevComponents.DotNetBar.LabelX labelX1;
@@ -349,4 +348,4 @@
         private System.Windows.Forms.DateTimePicker dateKT;
         private DevComponents.DotNetBar.ButtonX btnTV;
     }
-    }
+}

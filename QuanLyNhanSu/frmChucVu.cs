@@ -7,24 +7,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Data.OleDb;
 
-namespace QuanLyNhanSu
+namespace QuanLiNhanSu
 {
     public partial class frmChucVu : Form
     {
+
         public frmChucVu()
         {
             InitializeComponent();
             this.dgvCV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
         //SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-UJHK73G\SQLEXPRESS;Initial Catalog=QuanLyNhanSu;Integrated Security=True");
+           
 
-
-
+      
         private void btnThemPB_Click(object sender, EventArgs e)
-        { }
-
-
+        {       }
+            
+  
         private void btnNhaplai_Click(object sender, EventArgs e)
         {
             txtMaCV.Clear();
@@ -52,12 +55,12 @@ namespace QuanLyNhanSu
 
         private void txtMaCV_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void buttonX1_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void txtTenCV_TextChanged(object sender, EventArgs e)
@@ -80,7 +83,7 @@ namespace QuanLyNhanSu
             frmThemCV form = new frmThemCV();
             form.Show();
 
-
+            
         }
 
         private void btnThoat_Click_1(object sender, EventArgs e)
@@ -104,7 +107,7 @@ namespace QuanLyNhanSu
             dgvCV.DataSource = ConnectDatabase.getAllChucVu();
             MessageBox.Show("Xóa Thành Công Chức Vụ!!!");
         }
-
+        
         private void btnTrolai_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -123,7 +126,7 @@ namespace QuanLyNhanSu
         }
 
 
-
+        
 
         private void btnHienThi_Click_1(object sender, EventArgs e)
         {
@@ -191,4 +194,6 @@ namespace QuanLyNhanSu
 
         }
     }
-}
+ }
+
+

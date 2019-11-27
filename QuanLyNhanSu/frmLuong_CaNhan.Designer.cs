@@ -1,4 +1,4 @@
-﻿namespace QuanLyNhanSu
+﻿namespace QuanLiNhanSu
 {
     partial class frmLuong_CaNhan
     {
@@ -356,9 +356,11 @@
             this.Load += new System.EventHandler(this.frmLuong_CaNhan_Load_2);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLuong_CaNhan)).EndInit();
             this.ResumeLayout(false);
+
         }
 
         #endregion
+
         private DevComponents.DotNetBar.LabelX labelX1;
         private DevComponents.DotNetBar.Controls.DataGridViewX dgvLuong_CaNhan;
         private DevComponents.DotNetBar.Controls.TextBoxX txtTimKiem;

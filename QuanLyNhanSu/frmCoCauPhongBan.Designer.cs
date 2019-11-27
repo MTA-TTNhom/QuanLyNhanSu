@@ -1,4 +1,4 @@
-﻿namespace QuanLyNhanSu
+﻿namespace QuanLiNhanSu
 {
     partial class frmCoCauPhongBan
     {
@@ -28,11 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "frmCoCauPhongBan";
-
             this.cboPB = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.dgvCCPB = new System.Windows.Forms.DataGridView();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
@@ -120,10 +115,10 @@
             this.Load += new System.EventHandler(this.frmCoCauPhongBan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCCPB)).EndInit();
             this.ResumeLayout(false);
+
         }
 
         #endregion
-
         private DevComponents.DotNetBar.Controls.ComboBoxEx cboPB;
         private System.Windows.Forms.DataGridView dgvCCPB;
         private DevComponents.DotNetBar.LabelX labelX1;

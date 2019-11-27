@@ -1,4 +1,4 @@
-﻿namespace QuanLyNhanSu
+﻿namespace QuanLiNhanSu
 {
     partial class frmHSNV
     {
@@ -294,6 +294,7 @@
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         #endregion

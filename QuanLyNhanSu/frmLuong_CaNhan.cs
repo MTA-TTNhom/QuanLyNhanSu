@@ -9,8 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Data.OleDb;
-
-namespace QuanLyNhanSu
+namespace QuanLiNhanSu
 {
     public partial class frmLuong_CaNhan : Form
     {
@@ -28,7 +27,7 @@ namespace QuanLyNhanSu
 
         private void dgvLuong_CaNhan_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+           
         }
 
         private void txtMaNV_TextChanged(object sender, EventArgs e)
@@ -36,7 +35,7 @@ namespace QuanLyNhanSu
             txtMaNV.Enabled = false;
         }
 
-
+       
 
         private void frmLuong_CaNhan_Load_2(object sender, EventArgs e)
         {
@@ -62,7 +61,7 @@ namespace QuanLyNhanSu
 
         private void btnThuong_Click(object sender, EventArgs e)
         {
-            Luong temp = new Luong(txtMaNV.Text, txtLuong.Text, txtLuongThuong.Text, txtGhichu.Text, txtSNTC.Text, txtTongLuong.Text);
+            Luong temp = new Luong(txtMaNV.Text,txtLuong.Text, txtLuongThuong.Text, txtGhichu.Text,txtSNTC.Text, txtTongLuong.Text);
             ConnectDatabase.SuaLuong_NV(temp);
             dgvLuong_CaNhan.DataSource = ConnectDatabase.GetAllLuong_NV();
         }

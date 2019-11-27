@@ -16,5 +16,12 @@ namespace QuanLyNhanSu
         {
             InitializeComponent();
         }
+		   public void HienThiDataGridViewComboBoxColumn(DataGridViewComboBoxColumn cmbColumn)
+
+        {
+            cmbColumn.DataSource = m_MonHocData.LayDsMonHoc();
+
+        }
+		
     }
 }
