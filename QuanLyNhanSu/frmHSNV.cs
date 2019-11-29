@@ -22,22 +22,72 @@ namespace QuanLiNhanSu
         SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-UJHK73G\SQLEXPRESS;Initial Catalog=QuanLyNhanSu1;Integrated Security=True");
 
         private void txtTenNV_HSNV_TextChanged(object sender, EventArgs e)
+?
+        private void btnEmployees_Store_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-        //    TextBox temp = sender as TextBox;
-        //    string tennv = temp.Text;
+            Employees_Store info = new Employees_Store();
+            info.init(idEmployees);
+            showFormChild(info);
+        }
+        private void btnItem_Store_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Item_Store info = new Item_Store();
+            info.init(typeOfEmployees, idEmployees);
+            showFormChild(info);
+        }
 
-        //    string sql = "SELECT TenNV from NHANVIEN";
-        //    DataTable dt = new DataTable();
-        //    using (SqlCommand command = new SqlCommand(sql, conn))
-        //    {
-        //        command.Parameters.Add(new SqlParameter("@macv", ten));
+        private void btnCustormer_Store_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Customer_Store info = new Customer_Store();
+            showFormChild(info);
+        }
 
-        //        SqlDataAdapter da = new SqlDataAdapter(command);
-        //        da.Fill(dt);
+        private void btnSupplier_Store_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Supplier_Store info = new Supplier_Store();
+            showFormChild(info);
+        }
 
+        private void btnInventory_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Inventory info = new Inventory();
+            showFormChild(info);
+        }
 
-        //    }
-        //    .DataSource = dt;
+        private void btnStatistical_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void btnLogout_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn có thực sự muốn đăng xuất?", "Xác minh", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (result == DialogResult.OK)
+                Application.Exit();
+        }
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnList_ReceiptVou_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            ListReceipt_Vou info = new ListReceipt_Vou();
+            showFormChild(info);
+        }
+
+        private void btnList_IssueVou_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            ListIssue_Vou info = new ListIssue_Vou();
+            showFormChild(info);
+        }
+        #region BindingNavigatorItems
+        private void bindingNavigatorExitItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        #endregion
+
         }
 
         private void frmHSNV_Load(object sender, EventArgs e)
